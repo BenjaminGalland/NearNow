@@ -1,0 +1,11 @@
+<p>new</p>
+<%= simple_form_for @event do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :public %>
+  <%= f.input :max_people %>
+  <%= f.submit %>
+<% end %>
