@@ -1,17 +1,38 @@
-<p>show</p>
-<h3><%= @event.name %></h3>
-<p><%= @event.participants.count %> participant(s)</p>
-<% if current_user == @event.user %>
-  <%= link_to "Éditer l'évènement", edit_event_path %>
-  <%= link_to "Supprimer l'évènement", event_path(@event),
-  data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer #{@event.name}?"} %>
+<div class="body-container">
+  <div class="banner">
+    <h5>NEARNOW</h5>
+  </div>
+  <div class="mapbox-design"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
-<% else %>
-  <% if Participant.where(user_id: current_user.id, event_id: @event.id).empty? %>
-    <%= link_to "Ajouter au calendrier", event_participants_path(@event),
-    data: {turbo_method: :post}%>
+  <div class="show-page">
+
+  <h3 class="show-event-title"><%= @event.name %></h3>
+  <div class="show-event-card">
+    <div class="show-event-infos">
+      <p><%= @event.participants.count %> participant(s)</p>
+      <p>Commence le <%= @event.start_date.strftime("%m/%d/%Y") %></p>
+      <p>A partir de <%= @event.start_date.strftime("%H:%M") %></p>
+    </div>
+    <img class="show-event-photo" src="" alt="Photo de l'évènement">
+  </div>
+
+  <% if current_user == @event.user %>
+    <%= link_to "Éditer l'évènement", edit_event_path %>
+    <%= link_to "Supprimer l'évènement", event_path(@event),
+    data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer #{@event.name}?"} %>
+
   <% else %>
-    <%= link_to "Retirer du calendrier" ,  event_participant_path(@event),
-    data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment retirer #{@event.name} de votre calendrier?"}%>
+    <% if Participant.where(user_id: current_user.id, event_id: @event.id).empty? %>
+      <%= link_to "Ajouter au calendrier", event_participants_path(@event),
+      data: {turbo_method: :post}%>
+    <% else %>
+      <%= link_to "Retirer du calendrier" ,  event_participant_path(@event),
+      data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment retirer #{@event.name} de votre calendrier?"}%>
+    <% end %>
   <% end %>
-<% end %>
+  </div>
+  </div>
+</div>
