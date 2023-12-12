@@ -1,2 +1,17 @@
 <p>show</p>
 <h3><%= @event.name %></h3>
+<p><%= @event.participants.count %> participant(s)</p>
+<% if current_user == @event.user %>
+  <%= link_to "Éditer l'évènement", edit_event_path %>
+  <%= link_to "Supprimer l'évènement", event_path(@event),
+  data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer #{@event.name}?"} %>
+
+<% else %>
+  <% if Participant.where(user_id: current_user.id, event_id: @event.id).empty? %>
+    <%= link_to "Ajouter au calendrier", event_participants_path(@event),
+    data: {turbo_method: :post}%>
+  <% else %>
+    <%= link_to "Retirer du calendrier" ,  event_participant_path(@event),
+    data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment retirer #{@event.name} de votre calendrier?"}%>
+  <% end %>
+<% end %>
