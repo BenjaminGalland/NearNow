@@ -1,8 +1,23 @@
-<p>index</p>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="body-container">
+  <h5>Index</h5>
+
+<div class="mapbox-container-body">
+  <div class="mapbox-design" style="width: 100%; height: 60vh;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-<%= link_to "Calendrier", dashboard_path, class: "button-green" %>
-<%= link_to "Créer un évènement", new_event_path, class: "button-green" %>
+</div>
+
+  <div class="profile-page">
+    <div class="profile-infos">
+      <p>Toto etc</p>
+    </div>
+
+    <div class="profile-actions">
+      <%= link_to "Calendrier", dashboard_path, class: "button-green" %>
+      <%= link_to "Créer un évènement", new_event_path, class: "button-green" %>
+    </div>
+  </div>
+
+</div>
