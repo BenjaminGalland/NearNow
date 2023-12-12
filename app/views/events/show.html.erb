@@ -12,9 +12,14 @@
   <h3 class="show-event-title"><%= @event.name %></h3>
   <div class="show-event-card">
     <div class="show-event-infos">
-      <p><%= @event.participants.count %> participant(s)</p>
-      <p>Commence le <%= @event.start_date.strftime("%m/%d/%Y") %></p>
-      <p>A partir de <%= @event.start_date.strftime("%H:%M") %></p>
+      <div class="show-event-tags">
+        <% @event.tags.each do |tag| %>
+          <%= tag.name %>
+        <% end %>
+      </div>
+      <p class="participants-count"><%= @event.participants.count %> participant(s)</p>
+      <p class="show-start-date">Commence le <%= @event.start_date.strftime("%m/%d/%Y") %></p>
+      <p class="show-start-time">A partir de <%= @event.start_date.strftime("%H:%M") %></p>
     </div>
     <img class="show-event-photo" src="" alt="Photo de l'évènement">
   </div>
