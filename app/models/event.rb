@@ -4,8 +4,11 @@ class Event < ApplicationRecord
 
   belongs_to :user
   has_one :chatroom
-  has_many :participants
+  has_many :participants, dependent: :destroy
+  has_many :event_tags, dependent: :destroy
   has_many :tags, through: :event_tags
+
+  accepts_nested_attributes_for :event_tags
 
   validates :name, :address, :start_date, :end_date, presence:true
   validates :max_people, numericality: { only_integer: true }
