@@ -1,12 +1,15 @@
 .profile-page {
+  z-index: 5;
   width: 100%;
-  min-height: 28vh;
+  position: absolute;
+  min-height: 30vh;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
-  background-color: rgb(230, 240, 236);
+  background-color: #edf1f0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  bottom: 0;
 }
 
 .profile-actions {

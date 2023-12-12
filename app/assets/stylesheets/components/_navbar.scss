@@ -1,10 +1,25 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  // justify-content: space-between;
+  background: rgb(152, 235, 152);
   width: 100%;
-  height: 8vh;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  height: 6vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.navbar {
+  .container-fluid {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  a.nav-link {
+    font-size: 16px;
+    font-weight: 500;
+
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
