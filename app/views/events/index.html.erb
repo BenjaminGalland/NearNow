@@ -7,6 +7,8 @@
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
+
+  <% if user_signed_in? %>
     <div class="profile-page">
       <div class="profile-infos">
         <h5><%= current_user.username %></h5>
@@ -22,7 +24,6 @@
         <%= link_to "Créer un évènement", new_event_path, class: "button-blueish" %>
       </div>
     </div>
+  <% end %>
   </div>
-
-
 </div>
