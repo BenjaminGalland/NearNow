@@ -2,7 +2,18 @@
 <h1 class="dashboard-title">Dashboard</h1>
 
 <p class="dashboard-synopsis">Hey <strong><%= current_user.username %></strong>! Prêt à sortir?</p>
-<h5 class="dashb-title-snacks">Tes événnements</h5>
+
+    <div class="calendar">
+      <%= month_calendar(events: @events) do |date, events| %>
+        <%= date.day %>
+          <% events.each do |event| %>
+        <div>
+          <%= event.name %>
+        </div>
+      <% end %>
+      <% end %>
+    </div>
+
 
 
 <div class="">
