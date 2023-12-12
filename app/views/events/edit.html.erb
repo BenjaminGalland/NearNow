@@ -11,7 +11,8 @@
       <%= f.input :event_tag_ids,
         collection: Tag.all,
         as: :check_boxes,
-        required: true
+        required: true,
+        checked: @event.tags.map {|tag| tag.id }
       %>
       <%= f.submit %>
   <% end %>

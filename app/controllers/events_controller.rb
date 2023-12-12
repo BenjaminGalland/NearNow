@@ -43,6 +43,14 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
+      EventTag.where(event_id: @event.id).each do |event_tag|
+        event_tag.destroy
+      end
+      tags = params[:event][:event_tag_ids]
+      tags.shift
+      tags.each do |tag|
+        event_tag = EventTag.create!(event_id: @event.id, tag_id: tag.to_i)
+      end
       redirect_to event_path(@event)
     else
       render :edit, status: :unprocessable_entity
