@@ -6,16 +6,22 @@
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  <div class="profile-page">
-    <div class="profile-infos">
-      <p>Toto etc</p>
-    </div>
 
-    <div class="profile-actions">
-      <%= link_to "Calendrier", dashboard_path, class: "button-green" %>
-      <%= link_to "Créer un évènement", new_event_path, class: "button-green" %>
+    <div class="profile-page">
+      <div class="profile-infos">
+        <h5><%= current_user.username %></h5>
+        <p><%= current_user.location %></p>
+      </div>
+
+      <div class="profile-description">
+        <p><%= current_user.description %></p>
+        <p><%= current_user.events.count %> participation à des évènements</p>
+      </div>
+      <div class="profile-actions">
+        <%= link_to "Calendrier", dashboard_path, class: "button-blueish" %>
+        <%= link_to "Créer un évènement", new_event_path, class: "button-blueish" %>
+      </div>
     </div>
-  </div>
   </div>
 
 
