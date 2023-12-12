@@ -1,1 +1,18 @@
-// Specific CSS for your home-page
+.profile-page {
+  z-index: 5;
+  width: 100%;
+  position: absolute;
+  min-height: 30vh;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  background-color: #edf1f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom: 0;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-around;
+}
