@@ -7,5 +7,10 @@
   <%= f.input :end_date %>
   <%= f.input :public %>
   <%= f.input :max_people %>
+  <%= f.input :event_tag_ids,
+    collection: Tag.all,
+    as: :check_boxes,
+    required: true
+  %>
   <%= f.submit %>
 <% end %>
