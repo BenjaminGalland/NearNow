@@ -6,7 +6,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   align-content: center;
   box-sizing: border-box;
-  background: rgb(174,238,208);
+  // background: rgb(174,238,208);
   border-radius: 15px;
 }
 
@@ -32,7 +32,7 @@
 
 .tag-selector + label {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 14px;
   border-radius: 10px;
   padding: 0.1rem 0.5rem;
   background-color: #ECEAFF;
@@ -53,10 +53,10 @@
 }
 
 .submit-btn {
-  margin: 50px;
-  margin-top: 40px;
-  // position: absolute;
-  height: 55px;
+  margin: 23%;
+  margin-top: 0px;
+  height: 40px;
+  border-radius: 5px
 }
 
 .top-space {
@@ -68,7 +68,6 @@
   height: 50px;
 }
 
-.form-color {
-  background: rgb(248,189,79);
-background: linear-gradient(0deg, rgba(248,189,79,1) 21%, rgba(70,116,175,1) 79%);
-}
+// .form-color {
+//   // background: rgb(70,116,175);
+// }

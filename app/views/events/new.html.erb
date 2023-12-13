@@ -1,8 +1,7 @@
-<div class="form-color">
-  <div class="title-create">
-    <h4 style="color: white">Create the next event !</h4>
+<div class="title-create">
+    <h4>Create the next event !</h4>
   </div>
-    <div class="body-container">
+    <div class="body-container form-color">
         <%= simple_form_for @event, class: "form-content" do |f| %>
           <div class="top-space">
               <%= f.input :name %>
@@ -22,9 +21,6 @@
                   required: true
                 %>
               </div>
-              <div class="submit-btn">
-                <%= f.submit%>
-              </div>
+                <%= f.submit class: "submit-btn" %>
         <% end %>
     </div>
-</div>
