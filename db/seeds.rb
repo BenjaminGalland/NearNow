@@ -20,9 +20,14 @@ puts "Create toto user"
 toto = User.create(username: "toto", email: "toto@gmail.com", password: "azerty", age: 29, location: "Marseille", description: "Juste un curieux qui passait par là.")
 
 puts "Create tags --------------"
-tag1 = Tag.create(name: "Sport")
-tag2 = Tag.create(name: "Culturel")
-tag3 = Tag.create(name: "Technologie")
+tag1 = Tag.create(name: "Technologie")
+tag2 = Tag.create(name: "Sport")
+tag3 = Tag.create(name: "Culturel")
+tag4 = Tag.create(name: "Enfants")
+tag5 = Tag.create(name: "Environnement")
+tag6 = Tag.create(name: "Environnement")
+tag7 = Tag.create(name: "Environnement")
+
 
 
 puts "Create events --------------"
