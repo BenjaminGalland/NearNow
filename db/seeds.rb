@@ -9,8 +9,8 @@
 #   end
 
 puts "Clear database"
-Tag.destroy_all
 Event.destroy_all
+Tag.destroy_all
 User.destroy_all
 
 puts "Create users ---------------"
