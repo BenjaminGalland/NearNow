@@ -1,6 +1,5 @@
-.profile-page {
-  z-index: 5;
-  border: 2px solid white;
+.show-page{
+  z-index : 5;
   width: 100%;
   position: absolute;
   min-height: 30vh;
@@ -11,20 +10,14 @@
   flex-direction: column;
   justify-content: space-around;
   bottom: 0;
+  padding-left: 5%;
 }
 
-.profile-actions {
+.show-event-card {
   display: flex;
   justify-content: space-around;
 }
 
-.profile-infos {
-
-  display: flex;
-  justify-content: space-around;
-}
-
-.profile-description {
-  text-align: start;
-  margin-left: 8vh;
+.show-event-title {
+  text-align: center;
 }
