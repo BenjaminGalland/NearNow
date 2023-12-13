@@ -2,12 +2,13 @@
   <div class="banner">
     <h5>NEARNOW</h5>
   </div>
+  <% session[:event] = @event %>
   <div class="mapbox-design"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
     data-map-page-value="show"
-    data-map-user-location-value="<%= user_signed_in? ? [current_user.longitude, current_user.latitude] : [5.3699525 ,43.2961743] %>">
+    data-map-user-location-value="<%= session[:event].nil? ? [5.3699525 ,43.2961743] : [session[:event]["longitude"], session[:event]["latitude"]] %>">
 
   <div class="show-page">
 
@@ -25,7 +26,7 @@
     </div>
     <img class="show-event-photo" src="" alt="Photo de l'évènement">
   </div>
-
+    <%= link_to "Voir tous les évènements", root_path %>
   <% if current_user == @event.user %>
     <%= link_to "Aller à la discussion", chatroom_path(@event.chatroom) %>
     <%= link_to "Éditer l'évènement", edit_event_path %>
