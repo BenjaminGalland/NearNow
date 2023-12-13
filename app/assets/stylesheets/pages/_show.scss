@@ -13,6 +13,18 @@
   padding-left: 5%;
 }
 
+.show-page-background {
+  z-index: 4;
+  width: 100.5vw;
+  position: absolute;
+  min-height: 40.4vh;
+  bottom: 0;
+  left: -0.25vw;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgba(31,126,224,1) 100%);
+}
+
 .show-event-card {
   display: flex;
   justify-content: space-around;

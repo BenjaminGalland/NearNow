@@ -9,7 +9,7 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
     data-map-page-value="show"
     data-map-user-location-value="<%= session[:event].nil? ? [5.3699525 ,43.2961743] : [session[:event]["longitude"], session[:event]["latitude"]] %>">
-
+  <div class="show-page-background"></div>
   <div class="show-page">
 
   <h3 class="show-event-title"><%= @event.name %></h3>
