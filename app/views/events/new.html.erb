@@ -1,17 +1,19 @@
 <div class="body-container">
-  <%= simple_form_for @event do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :address %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.input :public %>
-    <%= f.input :max_people %>
-    <%= f.input :event_tag_ids,
-      collection: Tag.all,
-      as: :check_boxes,
-      required: true
-    %>
-    <%= f.submit class: "submit" %>
-  <% end %>
+    <%= simple_form_for @event, class: "form-content" do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.input :public %>
+      <%= f.input :max_people %>
+        <div class="scroll">
+        <%= f.input :event_tag_ids,
+          collection: Tag.all,
+          as: :check_boxes,
+          required: true
+        %>
+        </div>
+      <%= f.submit class: "submit" %>
+    <% end %>
 </div>

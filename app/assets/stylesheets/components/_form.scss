@@ -1,10 +1,11 @@
 .body-container {
-  max-width: 330px;
+  max-width: 260px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   align-content: center;
+  box-sizing: border-box;
   // background: rgb(174,238,208);
 }
 
@@ -21,13 +22,8 @@
   align-items: center;
 }
 
-// .d-flex {
-//   width: 100%;
-//   border-radius: 4px;
-// }
-
-.mx-1 {
-  width: 100%;
-  border-radius: 5px;
-  border: 2px solid #ccc;
+.form-content {
+  margin: 0 auto;
+  height: 50px;
+  background: rgb(174,238,208);
 }
