@@ -19,11 +19,13 @@
         <p><%= current_user.description %></p>
         <p><%= current_user.events.count %> participation à des évènements</p>
       </div>
+
       <div class="profile-actions">
         <%= link_to "Calendrier", dashboard_path, class: "button-blueish" %>
         <%= link_to "Créer un évènement", new_event_path, class: "button-blueish" %>
       </div>
+
     </div>
-  <% end %>
+    <% end %>
   </div>
 </div>
