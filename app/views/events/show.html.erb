@@ -20,7 +20,7 @@
         <% end %>
       </div>
       <p class="participants-count"><%= @event.participants.count %> participant(s)</p>
-      <p class="show-start-date">Commence le <%= @event.start_date.strftime("%m/%d/%Y") %></p>
+      <p class="show-start-date">Commence le <%= @event.start_date.strftime("%d/%m/%Y") %></p>
       <p class="show-start-time">A partir de <%= @event.start_date.strftime("%H:%M") %></p>
     </div>
     <img class="show-event-photo" src="" alt="Photo de l'évènement">
