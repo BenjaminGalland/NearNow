@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     resources :participants, only: [:create, :destroy]
   end
 
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
+
   get "/dashboard", to: "pages#dashboard"
   # Defines the root path route ("/")
   # root "posts#index"
