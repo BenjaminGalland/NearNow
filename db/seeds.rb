@@ -33,14 +33,16 @@ tag7 = Tag.create(name: "Environnement")
 puts "Create events --------------"
 event1 = Event.create(
   name: "Soirée spéciale au Wagon",
-  start_date: DateTime.new(2023,12,12,18,15),
-  end_date: DateTime.new(2023,12,12,23,00),
+  start_date: DateTime.new(2023,12,25,18,15),
+  end_date: DateTime.new(2023,12,25,23,00),
   address: "21 rue Haxo Marseille",
   description: "Venez nombreux!",
   public: true,
   max_people: 0,
   user_id: tal.id
   )
+chatroom = Chatroom.new(name: event1.name, event_id: event1.id)
+chatroom.save
 participant = Participant.new(user_id: tal.id, event_id: event1.id)
 participant.save
 puts "#{event1.name} created!"
