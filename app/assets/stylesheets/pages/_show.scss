@@ -1,0 +1,23 @@
+.show-page{
+  z-index : 5;
+  width: 100%;
+  position: absolute;
+  min-height: 40vh;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  background-color: #edf1f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom: 0;
+  padding-left: 5%;
+}
+
+.show-event-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-event-title {
+  text-align: center;
+}
