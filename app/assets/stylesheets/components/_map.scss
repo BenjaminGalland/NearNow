@@ -16,5 +16,15 @@
 
 .mapboxgl-popup-content {
   text-align: center;
+  opacity: 90%;
   font-family: "Open Sans", sans-serif;
+  background-color: rgb(234, 239, 247);
+  border-radius: 16px;
+  border: 2px solid black;
+  color: rgb(52, 56, 63);
+  font-size: 16px;
+  font-weight: 700;
+  a {
+    text-decoration: none;
+  }
 }
