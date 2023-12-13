@@ -6,18 +6,21 @@
 
 }
 
-.table {
-  background-color: #5784BA;
-}
-.calendar-heading {
-  background-color: #CA3C66;
+.body {
+  background-color: #E8AABE;
 }
 
-.dashb-title {
+
+.calendar-heading {
+  background-color: #CA3C66;
   margin-top: 16px;
   margin-bottom: 16px;
   font-weight: bold;
+  text-align: center;
+  display: -webkit-inline-box;
+  justify-content: space-between;
 }
+
 
 .dashboard-title {
   text-align: center;
@@ -27,33 +30,31 @@
 }
 
 .dashboard-synopsis{
-  font-size: 1,25em;
+  font-size: 2,35em;
+  font-style: italic;
+  margin-top: 33px;
+  margin-bottom: 1rem;
+
 
 }
-
-
 
 .calendar {
-  background-color:#5784BA;
-}
-
-
-.th {
-  background-color: #D4D3DC;
-}
-.tr {
-  background-color: #5784BA;
+  background-color:#CA3C66;
+  text-align: center;
 }
 
 .simple-calendar {
-  .day {
 
+
+
+  .day {
+   wi
   }
   .wday-0 {
-    color: #CA3C66;
+
   }
   .wday-1 {
-    text-align: center;
+
   }
   .wday-2 {
 
@@ -72,14 +73,13 @@
   }
 
   .start-date {
-    background-color: #E8AABE;
-    // font-weight: bold;
-
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
   }
 
   .today {
 
-		color: rgba(156, 202, 235, 1);
 	}
 
   .prev-month {
@@ -96,5 +96,8 @@
 
   .has-events {
     font-size: 19px;
+    background-color: #E8AABE;
+
+
   }
 }
