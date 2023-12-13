@@ -7,7 +7,7 @@
 }
 
 .body {
-  background-color: #E8AABE;
+  font-family: sans-serif ;
 }
 
 
@@ -18,9 +18,8 @@
   font-weight: bold;
   text-align: center;
   display: inline-block;
-  justify-content: space-between;
-  padding-left: 0px;
-  padding-right: 20px;
+  padding-left: 3px;
+  padding-right: 13px;
 }
 
 
@@ -29,16 +28,14 @@
   text-align: center;
   margin-right: 10%;
   font-weight: bold;
-
 }
 
 .dashboard-synopsis{
-  font-size: 2,35em;
-  font-style: italic;
   margin-top: 33px;
-  margin-bottom: 1rem;
-
-
+  font-size: 16px;
+  font-style: revert;
+  margin-top: 33px;
+  margin-bottom: -1rem;
 }
 
 .calendar {
@@ -59,12 +56,14 @@
   width: 72px;
   height: 33px;
   border-radius: 40px;
-  background: rgb(108, 157, 117);
+  background: linear-gradient(233deg, #17d543 0%, #1f7ee0 100%);
   color: #392E2C;
-  font-size: 14px;
-  font-weight: 600;
   text-align: -moz-center;
   padding-top: 5px;
+}
+.navbar a.nav-link {
+  font-size: 16px;
+  font-weight: 600;
 }
 .container-fluid {
   background: rgb(159, 163, 160);
@@ -72,8 +71,11 @@
 
 
 .calendar-title {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 16px;
+  padding-right: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #023a3f;
 }
 
 .simple-calendar {
@@ -98,11 +100,15 @@
     text-align: center;
     font-size: 15px;
     color: #CA3C66;
-    background: #52D169;
+
   }
 
   .today {
-
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(112, 71, 235);
+    color:#363B48;
+    background: #52D169;
 	}
 
   .prev-month {
@@ -115,7 +121,7 @@
 
   }
   .current-month {
-    background-color: #b0edbb;
+
   }
 
   .has-events {
