@@ -12,12 +12,12 @@
 
 
 .calendar-heading {
-  background-color: #CA3C66;
+  background-color: #52D169;
   margin-top: 16px;
   margin-bottom: 16px;
   font-weight: bold;
   text-align: center;
-  display: -webkit-inline-box;
+  display: inline-block;
   justify-content: space-between;
 }
 
@@ -39,8 +39,38 @@
 }
 
 .calendar {
-  background-color:#CA3C66;
+  background: #52D169;
+  box-shadow: 0 0 20px #878787;
   text-align: center;
+  width: 243px;
+  border-radius: 4px 4px 4px 4px;
+  margin-top: 35px;
+}
+
+.carte-text {
+  color: black;
+  font-weight: 600;
+
+}
+.nav-link{
+  width: 72px;
+  height: 33px;
+  border-radius: 40px;
+  background: rgb(108, 157, 117);
+  color: #392E2C;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: -moz-center;
+  padding-top: 5px;
+}
+.container-fluid {
+  background: rgb(159, 163, 160);
+}
+
+
+.calendar-title {
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .simple-calendar {
@@ -48,34 +78,24 @@
 
 
   .day {
-   wi
-  }
-  .wday-0 {
+   width: 20px;
+   height: 20px;
 
   }
-  .wday-1 {
-
-  }
-  .wday-2 {
-
-  }
-  .wday-3 {
-
-  }
-  .wday-4 {
-
-  }
-  .wday-5 {
-
-  }
-  .wday-6 {
-
-  }
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
 
   .start-date {
     font-weight: bold;
     text-align: center;
-    font-size: 19px;
+    font-size: 15px;
+    color: #CA3C66;
+    background: #52D169;
   }
 
   .today {
@@ -83,7 +103,8 @@
 	}
 
   .prev-month {
-    background-color: #D4D3DC;
+    background-color: #c6c5ce;
+    color: #878787;
 
   }
   .next-month {
@@ -91,7 +112,7 @@
 
   }
   .current-month {
-
+    background-color: #b0edbb;
   }
 
   .has-events {
