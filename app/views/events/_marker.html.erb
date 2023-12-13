@@ -1,8 +1,7 @@
-<%# <div class="event <%= event.public ? 'public' : 'private' %>
-  <%# <%= image_tag "Monamidiego.jpeg", alt: "Logo" %>
-<%# </div> %>
-
-
 <div class="event <%= event.marker_class %>">
-  <%= image_tag "Monamidiego.jpeg", alt: "Logo" %>
+  <% if event.public %>
+    <%= image_tag "Monamidiego.jpg" %>
+  <% else %>
+    <%= image_tag "clipsouroll.jpg"%>
+  <% end %>
 </div>

@@ -1,0 +1,19 @@
+.tags {
+  margin-left: 0;
+  margin-bottom: 5px;
+  align-items: center;
+  background-color: #212738;
+  border-radius: 8px;
+  color: whitesmoke;
+  display: inline-block;
+  height: 26px;
+  padding: 0 16px;
+}
+
+.tags:active{
+  background-color: #52d169;
+}
+
+ul {
+  list-style-type: none;
+}
