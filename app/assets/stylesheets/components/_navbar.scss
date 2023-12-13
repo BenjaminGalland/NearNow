@@ -1,9 +1,8 @@
 .navbar-lewagon {
   background: #edf1f0;
   width: 100%;
-  height: 5vh;
-  position: absolute;
-  bottom: 0;
+  max-height: 5vh;
+
 }
 
 .navbar {
@@ -23,8 +22,4 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
 }
