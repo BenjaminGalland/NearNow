@@ -3,7 +3,7 @@
 
 <p class="dashboard-synopsis">Hey <strong><%= current_user.username %></strong>! Prêt à sortir?</p>
 
-    <div class="calendar">
+    <div class="calendar justify-content-center">
       <%= month_calendar(events: @events) do |date, events| %>
         <%= date.day %>
           <% events.each do |event| %>

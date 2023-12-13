@@ -1,7 +1,16 @@
 .dashb-wrapper {
-  margin-left: 10%;
+  margin-left: 20%;
   margin-top: 32px;
-  margin-bottom: 32px;;
+  margin-bottom: 10%;
+  margin-right: 20%;
+
+}
+
+.table {
+  background-color: #5784BA;
+}
+.calendar-heading {
+  background-color: #CA3C66;
 }
 
 .dashb-title {
@@ -10,11 +19,82 @@
   font-weight: bold;
 }
 
-.dashboard-title, .dashboard-synopsis{
+.dashboard-title {
   text-align: center;
   margin-right: 10%;
+  font-weight: bold;
+
 }
 
 .dashboard-synopsis{
   font-size: 1,25em;
+
+}
+
+
+
+.calendar {
+  background-color:#5784BA;
+}
+
+
+.th {
+  background-color: #D4D3DC;
+}
+.tr {
+  background-color: #5784BA;
+}
+
+.simple-calendar {
+  .day {
+
+  }
+  .wday-0 {
+    color: #CA3C66;
+  }
+  .wday-1 {
+    text-align: center;
+  }
+  .wday-2 {
+
+  }
+  .wday-3 {
+
+  }
+  .wday-4 {
+
+  }
+  .wday-5 {
+
+  }
+  .wday-6 {
+
+  }
+
+  .start-date {
+    background-color: #E8AABE;
+    // font-weight: bold;
+
+  }
+
+  .today {
+
+		color: rgba(156, 202, 235, 1);
+	}
+
+  .prev-month {
+    background-color: #D4D3DC;
+
+  }
+  .next-month {
+   background-color: #D4D3DC;
+
+  }
+  .current-month {
+
+  }
+
+  .has-events {
+    font-size: 19px;
+  }
 }
