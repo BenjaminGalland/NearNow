@@ -6,7 +6,8 @@
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-    data-map-page-value="show">
+    data-map-page-value="show"
+    data-map-user-location-value="<%= user_signed_in? ? [current_user.longitude, current_user.latitude] : [5.3699525 ,43.2961743] %>">
 
   <div class="show-page">
 

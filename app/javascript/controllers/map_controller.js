@@ -6,7 +6,8 @@ export default class extends Controller {
   static values = {
     apiKey: String,
     markers: Array,
-    page: String
+    page: String,
+    userLocation: Array
   }
 
   connect() {
@@ -47,6 +48,8 @@ export default class extends Controller {
   }
 
   #fitMapToUserLocation() {
-
+    const bounds = new mapboxgl.LngLatBounds()
+    bounds.extend(this.userLocationValue)
+    this.map.fitBounds(bounds, { padding: 70, maxZoom: 13, duration: 0 })
   }
 }
