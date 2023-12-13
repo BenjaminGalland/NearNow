@@ -1,0 +1,33 @@
+.mapboxgl-marker {
+  border-radius: 50%;
+img {
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+}
+
+.event {
+
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  &.public {
+    border-color: green;
+  }
+
+  &.private {
+    border-color: red;
+  }
+
+  &.small-marker img{
+    height: 20px;
+    width: 20px;
+  }
+
+  &.big-marker img{
+    height: 60px;
+    width: 60px;
+  }
+
+}

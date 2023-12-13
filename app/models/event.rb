@@ -33,4 +33,20 @@ class Event < ApplicationRecord
   def end_time
     self.end_date
   end
+
+  def marker_class
+    classes = []
+
+    if public
+      classes << 'public'
+      classes << 'small-marker' if self.max_people < 5
+      classes << 'big-marker' if self.max_people > 5
+
+    else
+      classes << 'private'
+      classes << 'small-marker' if self.max_people < 5
+      classes << 'big-marker' if self.max_people > 5
+    end
+    classes.join(' ')
+  end
 end
