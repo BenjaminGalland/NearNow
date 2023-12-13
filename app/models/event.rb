@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   belongs_to :user
-  has_one :chatroom
+  has_one :chatroom, dependent: :destroy
   has_many :participants, dependent: :destroy
   has_many :event_tags, dependent: :destroy
   has_many :tags, through: :event_tags
@@ -32,5 +32,21 @@ class Event < ApplicationRecord
 
   def end_time
     self.end_date
+  end
+
+  def marker_class
+    classes = []
+
+    if public
+      classes << 'public'
+      classes << 'small-marker' if self.max_people < 5
+      classes << 'big-marker' if self.max_people > 5
+
+    else
+      classes << 'private'
+      classes << 'small-marker' if self.max_people < 5
+      classes << 'big-marker' if self.max_people > 5
+    end
+    classes.join(' ')
   end
 end
