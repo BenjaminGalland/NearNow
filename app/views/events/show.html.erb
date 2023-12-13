@@ -27,6 +27,7 @@
   </div>
 
   <% if current_user == @event.user %>
+    <%= link_to "Aller à la discussion", chatroom_path(@event.chatroom) %>
     <%= link_to "Éditer l'évènement", edit_event_path %>
     <%= link_to "Supprimer l'évènement", event_path(@event),
     data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer #{@event.name}?"} %>
@@ -36,6 +37,7 @@
       <%= link_to "Ajouter au calendrier", event_participants_path(@event),
       data: {turbo_method: :post}%>
     <% else %>
+      <%= link_to "Aller à la discussion", chatroom_path(@event.chatroom) %>
       <%= link_to "Retirer du calendrier" ,  event_participant_path(@event),
       data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment retirer #{@event.name} de votre calendrier?"}%>
     <% end %>
