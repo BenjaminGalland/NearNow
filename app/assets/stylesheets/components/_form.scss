@@ -1,6 +1,8 @@
 .body-container {
   max-width: 330px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   align-content: center;
   // background: rgb(174,238,208);
@@ -13,7 +15,10 @@
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+}
+
+.submit {
+  align-items: center;
 }
 
 // .d-flex {
@@ -26,14 +31,3 @@
   border-radius: 5px;
   border: 2px solid #ccc;
 }
-
-.mb-3 {
-  width: 100%;
-}
-
-// input,
-// select,
-// textarea {
-//   font-family: inherit;
-//   font-size: 100%;
-// }
