@@ -2,7 +2,6 @@
 <div class="body-container">
 
 
-    <div class="dashb-wrapper">
     <h1 class="dashboard-title">Dashboard</h1>
 
     <p class="dashboard-synopsis">Hey <strong><%= current_user.username %></strong>! Prêt à sortir?</p>
@@ -11,19 +10,18 @@
           <%= month_calendar(events: @events) do |date, events| %>
             <%= date.day %>
               <% events.each do |event| %>
-            <div>
-              <%= event.name %>
-            </div>
-          <% end %>
+                <div>
+                  <%= event.name %>
+                </div>
+              <% end %>
           <% end %>
         </div>
 
 
 
+
     <div class="carte">
-
-    <%= link_to "Retour à la carte", root_path, class: "carte-text" %>
+      <%= link_to "Retour à la carte", root_path, class: "carte-text" %>
     </div>
 
     </div>
-</div>
