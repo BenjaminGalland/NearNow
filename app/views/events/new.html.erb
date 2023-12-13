@@ -1,16 +1,26 @@
-<p>new</p>
-<%= simple_form_for @event do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.input :public %>
-  <%= f.input :max_people %>
-  <%= f.input :event_tag_ids,
-    collection: Tag.all,
-    as: :check_boxes,
-    required: true
-  %>
-  <%= f.submit %>
-<% end %>
+<div class="title-create">
+    <h4>Create the next event !</h4>
+  </div>
+    <div class="body-container form-color">
+        <%= simple_form_for @event, class: "form-content" do |f| %>
+          <div class="top-space">
+              <%= f.input :name %>
+          </div>
+            <%= f.input :description %>
+            <%= f.input :address %>
+            <%= f.input :start_date %>
+            <%= f.input :end_date %>
+            <%= f.input :public %>
+            <%= f.input :max_people %>
+              <div class="form-tags">
+                <%= f.input :event_tag_ids,
+                  collection: Tag.all,
+                  as: :check_boxes,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'form-tags',
+                  required: true
+                %>
+              </div>
+                <%= f.submit class: "submit-btn" %>
+        <% end %>
+    </div>
