@@ -1,0 +1,27 @@
+<div class="body-container">
+<% unless Participant.where(user_id: current_user.id, event_id: @chatroom.event.id).empty? %>
+<div class="container chatroom"
+  data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%=@chatroom.id%>">
+  <h1>#<%= @chatroom.name %></h1>
+
+  <div class="messages" data-chatroom-subscription-target="messages">
+    <% @chatroom.messages.each do |message| %>
+        <%= render "messages/message", message: message %>
+    <% end %>
+  </div>
+  <%= simple_form_for [@chatroom, @message],
+    html: {data: { action: "turbo:submit-end->chatroom-subscription#resetForm"}, class: "d-flex"} do |f|
+  %>
+    <%= f.input :content,
+      label: false,
+      placeholder: "Message ##{@chatroom.name}",
+      wrapper_html: {class: "flex-grow-1"}
+    %>
+    <%= f.submit "Envoyer", class: "btn btn-primary mb-3" %>
+  <% end %>
+</div>
+<% else %>
+  <p>Vous n'avez pas accès à ce canal de discussion!</p>
+<% end %>
+</div>
