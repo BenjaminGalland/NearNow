@@ -1,0 +1,133 @@
+.dashb-wrapper {
+  margin-left: 20%;
+  margin-top: 32px;
+  margin-bottom: 10%;
+  margin-right: 20%;
+
+}
+
+.body {
+  font-family: sans-serif ;
+}
+
+
+.calendar-heading {
+  background-color: #52D169;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  padding-left: 3px;
+  padding-right: 13px;
+}
+
+
+
+.dashboard-title {
+  text-align: center;
+  margin-right: 10%;
+  font-weight: bold;
+}
+
+.dashboard-synopsis{
+  margin-top: 33px;
+  font-size: 16px;
+  font-style: revert;
+  margin-top: 33px;
+  margin-bottom: -1rem;
+}
+
+.calendar {
+  background: #52D169;
+  box-shadow: 0 0 20px #878787;
+  text-align: center;
+  width: 243px;
+  border-radius: 4px 4px 4px 4px;
+  margin-top: 35px;
+}
+
+.carte-text {
+  color: black;
+  font-weight: 600;
+
+}
+.nav-link{
+  width: 72px;
+  height: 33px;
+  border-radius: 40px;
+  background: linear-gradient(233deg, #17d543 0%, #1f7ee0 100%);
+  color: #392E2C;
+  text-align: -moz-center;
+  padding-top: 5px;
+}
+.navbar a.nav-link {
+  font-size: 16px;
+  font-weight: 600;
+}
+.container-fluid {
+  background: rgb(159, 163, 160);
+}
+
+
+.calendar-title {
+  padding-left: 16px;
+  padding-right: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #023a3f;
+}
+
+.simple-calendar {
+
+
+
+  .day {
+   width: 20px;
+   height: 20px;
+
+  }
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .start-date {
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    color: #CA3C66;
+
+  }
+
+  .today {
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(112, 71, 235);
+    color:#363B48;
+    background: #52D169;
+	}
+
+  .prev-month {
+    background-color: #c6c5ce;
+    color: #878787;
+
+  }
+  .next-month {
+   background-color: #D4D3DC;
+
+  }
+  .current-month {
+
+  }
+
+  .has-events {
+    font-size: 19px;
+    background-color: #E8AABE;
+
+
+  }
+}

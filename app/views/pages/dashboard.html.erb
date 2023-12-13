@@ -1,13 +1,29 @@
-<p>dashboard</p>
-<p>Hey <strong><%= current_user.username %></strong>! Prêt à sortir?</p>
-<div class="calendar">
-  <%= month_calendar(events: @events) do |date, events| %>
-    <%= date.day %>
-      <% events.each do |event| %>
-    <div>
-      <%= event.name %>
+
+<div class="body-container">
+
+
+    <div class="dashb-wrapper">
+    <h1 class="dashboard-title">Dashboard</h1>
+
+    <p class="dashboard-synopsis">Hey <strong><%= current_user.username %></strong>! Prêt à sortir?</p>
+
+        <div class="calendar justify-content-center">
+          <%= month_calendar(events: @events) do |date, events| %>
+            <%= date.day %>
+              <% events.each do |event| %>
+            <div>
+              <%= event.name %>
+            </div>
+          <% end %>
+          <% end %>
+        </div>
+
+
+
+    <div class="carte">
+
+    <%= link_to "Retour à la carte", root_path, class: "carte-text" %>
     </div>
-  <% end %>
-  <% end %>
+
+    </div>
 </div>
-<%= link_to "Retour à la carte", root_path %>
