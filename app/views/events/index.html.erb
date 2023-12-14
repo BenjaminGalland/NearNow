@@ -16,8 +16,8 @@
         <p><%= current_user.location %></p>
       </div>
 
-      <div class="profile-description">
-        <p><%= current_user.description %></p>
+      <div class="profile-homepage-description">
+        <p><%= current_user.description%></p>
         <p><%= Participant.where(user_id: current_user.id).count %> participation à des évènements</p>
       </div>
 

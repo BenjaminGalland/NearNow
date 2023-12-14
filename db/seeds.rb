@@ -184,9 +184,9 @@ event7 = Event.create(
   start_date: DateTime.new(2023,12,15,18,00),
   end_date: DateTime.new(2023,12,15,23,00),
   address: "Rue Francis Davso 13001 Marseille",
-  description: "Organisée par Dylane pour son collègue Loris. Ramenez des cookies et des muffins svp",
+  description: "C'est pour Loris. Ramenez des cookies et des muffins svp",
   public: false,
-  max_people: 0,
+  max_people: 20,
   user_id: dylane.id
   )
 chatroom = Chatroom.new(name: event7.name, event_id: event7.id)
