@@ -17,7 +17,9 @@
     <div class="show-event-infos">
       <div class="show-event-tags">
         <% @event.tags.each do |tag| %>
+        <div class="show-tag">
           <%= tag.name %>
+        </div>
         <% end %>
       </div>
       <p class="participants-count"><%= @event.participants.count %> participant(s)</p>
@@ -39,8 +41,10 @@
   <% else %>
     <% if Participant.where(user_id: current_user.id, event_id: @event.id).empty? %>
     <div class="show-actions">
+      <div class="button-blueish">
       <%= link_to "Ajouter au calendrier", event_participants_path(@event),
-      data: {turbo_method: :post}%>
+      data: {turbo_method: :post}, class:"show-cta"%>
+      </div>
     </div>
     <% else %>
     <div class="show-actions">
@@ -50,8 +54,6 @@
     </div>
     <% end %>
   <% end %>
-  <div class="button-blueish">
-    <%= link_to "Voir tous les évènements", root_path, class: "show-back" %>
   </div>
   </div>
   </div>
