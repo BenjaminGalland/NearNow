@@ -1,40 +1,35 @@
-
-.body {
-  font-family: sans-serif ;
-}
-
-
 .calendar-heading {
   background-color: #52D169;
-  margin-top: 16px;
-  margin-bottom: 16px;
   font-weight: bold;
   text-align: center;
-  display: inline-block;
-  padding-left: 3px;
-  padding-right: 13px;
-}
-
-.dashboard-title {
-  text-align: center;
-  margin-right: 10%;
-  font-weight: bold;
-}
-
-.dashboard-synopsis{
-  margin-top: 33px;
-  font-size: 16px;
-  font-style: revert;
-  margin-top: 33px;
-  margin-bottom: -1rem;
 }
 
 .calendar {
   background: #52D169;
   box-shadow: 0 0 20px #878787;
   text-align: center;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
 }
+
+.calendar-title {
+  padding-left: 16px;
+  padding-right: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #023a3f;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.dashboard-synopsis{
+  font-size: 16px;
+  height: 20vh;
+
+}
+
 
 .carte-text {
   color: black;
@@ -59,35 +54,41 @@
 }
 
 
-.calendar-title {
-  padding-left: 16px;
-  padding-right: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #023a3f;
-}
 
 .simple-calendar {
-
-
+  .has-events {
+    font-size: 10px;
+  }
 
   .day {
-   width: 20px;
-   height: 20px;
 
   }
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
+  .wday-0 { width: 5vw;
+  height: 8vh;
+  }
+  .wday-1 { width: 5vw;
+  height: 8vh;
+  }
+  .wday-2 { width: 5vw;
+  height: 8vh;
+  }
+  .wday-3 { width: 5vw;
+  height: 8vh;
+  }
+  .wday-4 { width: 5vw;
+  height: 8vh;
+  }
+  .wday-5 { width: 5vw;
+  height: 8vh;
+  }
+  .wday-6 { width: 5vw;
+  height: 8vh;
+  }
 
   .start-date {
     font-weight: bold;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     color: #CA3C66;
 
   }
@@ -113,10 +114,4 @@
 
   }
 
-  .has-events {
-    font-size: 19px;
-    background-color: #E8AABE;
-
-
-  }
 }
