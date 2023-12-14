@@ -1,7 +1,12 @@
+
 <div class="event <%= event.marker_class %>">
+  <div class="icon-event-name">
+    <%= event.name %>
+  </div>
+
   <% if event.public %>
-    <%= image_tag "Monamidiego.jpg" %>
+    <%= image_tag "markers/publiciconblue.png" %>
   <% else %>
-    <%= image_tag "clipsouroll.jpg"%>
+    <%= image_tag "markers/espace-reserve.png"%>
   <% end %>
 </div>

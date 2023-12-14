@@ -1,27 +1,25 @@
 
 <div class="body-container">
+  <div class="dashboard-title">
+    <h1>Dashboard</h1>
+  </div>
 
-
-    <h1 class="dashboard-title">Dashboard</h1>
-
-    <p class="dashboard-synopsis">Hey <strong><%= current_user.username %></strong>! Prêt à sortir?</p>
-
-        <div class="calendar justify-content-center">
-          <%= month_calendar(events: @events) do |date, events| %>
-            <%= date.day %>
-              <% events.each do |event| %>
-                <div>
-                  <%= event.name %>
-                </div>
-              <% end %>
-          <% end %>
-        </div>
-
-
-
-
-    <div class="carte">
-      <%= link_to "Retour à la carte", root_path, class: "carte-text" %>
+  <div class="dashboard-wrapper">
+    <div class="dashboard-synopsis">
+      <p> <span class="greetings-dashboard">Hey <strong><%= current_user.username %></strong> !</span> <br>
+      <span class="greetings-dashboard-paragraph">Prêt à sortir?</span></p>
     </div>
 
-    </div>
+
+    <%= month_calendar(events: @events) do |date| %>
+      <h5> <%= date.day %> </h5>
+    <%# <div class="card-img"> %>
+        <%= image_tag "Monamidiego.jpg", class: "img-calendar" %>
+        <%# </div> %>
+    <% end %>
+  </div>
+
+  <div class="carte">
+    <%# <%= link_to "Retour à la carte", root_path, class: "carte-text" %>
+  </div>
+</div>
