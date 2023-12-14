@@ -12,12 +12,15 @@
   <% if user_signed_in? %>
     <div class="profile-page">
       <div class="profile-infos">
-        <h5><%= current_user.username %></h5>
-        <p><%= current_user.location %></p>
+        <div class="username">
+          <h5> @<%= current_user.username %></h5>
+        </div>
+        <div class="username-description">
+          <p><%= current_user.description%></p>
+        </div>
       </div>
 
-      <div class="profile-description">
-        <p><%= current_user.description %></p>
+      <div class="profile-homepage-description">
         <p><%= Participant.where(user_id: current_user.id).count %> participation à des évènements</p>
       </div>
 
