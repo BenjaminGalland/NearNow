@@ -7,16 +7,18 @@
     <div class="top-space">
       <%= f.input :name, label: "Nom" %>
     </div>
-      <%= f.input :description, label: "Nom" %>
-      <%= f.input :address %>
+      <%= f.input :description, label: "Description" %>
+      <%= f.input :address, label: "Adresse" %>
       <%= f.input :start_date,
         as: :string,
+        label: "Date de début",
         input_html: { data: { controller: "datepicker" } }%>
       <%= f.input :end_date,
         as: :string,
+        label: "Date de fin",
         input_html: { data: { controller: "datepicker" } }%>
       <%= f.input :public %>
-      <%= f.input :max_people %>
+      <%= f.input :max_people, label: "Maximum de participants", input_html: {value: '100'}%>
 
       <div class="form-tags">
         <%= f.input :event_tag_ids,
@@ -28,7 +30,7 @@
       </div>
 
       <div class="submit-button-formulaire">
-        <%= f.submit class: "submit-btn" %>
+        <%= f.submit class: "submit-btn", value: "Créer" %>
       </div>
   <% end %>
 </div>
