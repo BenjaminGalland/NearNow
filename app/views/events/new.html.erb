@@ -1,30 +1,34 @@
 <div class="title-create">
-    <h4>Create the next event !</h4>
-  </div>
-    <div class="container-heba form-color">
-        <%= simple_form_for @event, class: "form-content" do |f| %>
-          <div class="top-space">
-              <%= f.input :name %>
-          </div>
-            <%= f.input :description %>
-            <%= f.input :address %>
-            <%= f.input :start_date,
-              as: :string,
-              input_html: { data: { controller: "datepicker" } }%>
-            <%= f.input :end_date,
-              as: :string,
-              input_html: { data: { controller: "datepicker" } }%>
-            <%= f.input :public %>
-            <%= f.input :max_people %>
-              <div class="form-tags">
-                <%= f.input :event_tag_ids,
-                  collection: Tag.all,
-                  as: :check_boxes,
-                  input_html: { class: "tag-selector" },
-                  item_wrapper_class: 'form-tags',
-                  required: true
-                %>
-              </div>
-                <%= f.submit class: "submit-btn" %>
-        <% end %>
+  <h4>Créer un évènement</h4>
+</div>
+
+<div class="container-heba form-color">
+  <%= simple_form_for @event, class: "form-content" do |f| %>
+    <div class="top-space">
+      <%= f.input :name, label: "Nom" %>
     </div>
+      <%= f.input :description, label: "Nom" %>
+      <%= f.input :address %>
+      <%= f.input :start_date,
+        as: :string,
+        input_html: { data: { controller: "datepicker" } }%>
+      <%= f.input :end_date,
+        as: :string,
+        input_html: { data: { controller: "datepicker" } }%>
+      <%= f.input :public %>
+      <%= f.input :max_people %>
+
+      <div class="form-tags">
+        <%= f.input :event_tag_ids,
+          collection: Tag.all,
+          as: :check_boxes,
+          input_html: { class: "tag-selector" },
+          item_wrapper_class: 'form-tags',
+          required: true %>
+      </div>
+
+      <div class="submit-button-formulaire">
+        <%= f.submit class: "submit-btn" %>
+      </div>
+  <% end %>
+</div>

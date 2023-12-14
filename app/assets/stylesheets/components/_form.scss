@@ -1,28 +1,66 @@
 .container-heba {
-  max-width: 260px;
+  max-width: 80vw;
+  height: 105vh;
+  display: flex;
+  align-items: center;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
   box-shadow: rgba(126, 115, 255, 0.35) 0px 5px 15px;
   align-content: center;
   box-sizing: border-box;
-  // background: rgb(174,238,208);
   border-radius: 15px;
 }
+#new_event {
+  width: 35vh;
+  margin: 0 auto;
+}
 
-.form-control {
-  margin-bottom: 10px;
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 2px solid rgb(204, 204, 204);
-  border-radius: 5px;
+.form-label {
+  font-weight: 600;
+
+  abbr {
+    color: rgb(197, 17, 17);
+  }
+}
+
+.form-check-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: green;
 }
 
 .form-tags {
+  justify-content: space-between;
+  align-items: center;
   scroll-behavior: auto;
-  margin-bottom: 30px;
-  display: inline-block;
+}
+
+.col-form-label {
+  display: none;
+}
+
+#event_public {
+  font-size: 22px;
+  border: 2px solid grey;
+  margin-left: -6.5vw;
+}
+
+.event_event_tag_ids {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1vh;
+  grid-column-gap: 1vh;
+}
+
+.form-control {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+}
+
+.form-content {
+  margin: 0 auto;
+  height: 50px;
 }
 
 .tag-selector {
@@ -32,13 +70,13 @@
 
 .tag-selector + label {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 10px;
-  padding: 0.1rem 0.5rem;
   background-color: #ECEAFF;
   color: #7E73FF;
   border: 1px solid rgb(126, 115, 255);
-  margin-right: 9px;
+  width: 34vw;
+  text-align: center;
 }
 
 .tag-selector:checked + label {
@@ -47,31 +85,33 @@
 }
 
 .title-create {
-  text-align: center;
-  margin-top: 40px;
-  padding-bottom: 20px;
+  height: 8vh;
+  background: linear-gradient(233deg, #17d543 0%, #1f7ee0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    h4 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
 }
 
 .submit-btn {
-  margin: 23%;
-  margin-top: 0px;
-  height: 40px;
-  border-radius: 5px;
+  height: 6vh;
+  width: 100%;
+  border-radius: 30px;
   border: none;
-  padding: 10px 10px;
   background-color: rgb(248, 189, 79);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.top-space {
-  padding-top: 30px;
-}
+.submit-button-formulaire {
+  height: 8vh;
+  width: 76vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.form-content {
-  margin: 0 auto;
-  height: 50px;
 }
-
-// .form-color {
-//   // background: rgb(70,116,175);
-// }
