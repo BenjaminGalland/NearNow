@@ -9,7 +9,7 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
     data-map-page-value="show"
     data-map-user-location-value="<%= session[:event].nil? ? [5.3699525 ,43.2961743] : [session[:event]["longitude"], session[:event]["latitude"]] %>">
-
+  <div class="show-page-background"></div>
   <div class="show-page">
 
   <h3 class="show-event-title"><%= @event.name %></h3>
@@ -26,23 +26,34 @@
     </div>
     <img class="show-event-photo" src="" alt="Photo de l'évènement">
   </div>
-    <%= link_to "Voir tous les évènements", root_path %>
+  <p class="show-description"><%= @event.description %></p>
+  <div class="show-actions-container">
   <% if current_user == @event.user %>
+  <div class="show-actions">
     <%= link_to "Aller à la discussion", chatroom_path(@event.chatroom) %>
     <%= link_to "Éditer l'évènement", edit_event_path %>
     <%= link_to "Supprimer l'évènement", event_path(@event),
     data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer #{@event.name}?"} %>
+  </div>
 
   <% else %>
     <% if Participant.where(user_id: current_user.id, event_id: @event.id).empty? %>
+    <div class="show-actions">
       <%= link_to "Ajouter au calendrier", event_participants_path(@event),
       data: {turbo_method: :post}%>
+    </div>
     <% else %>
+    <div class="show-actions">
       <%= link_to "Aller à la discussion", chatroom_path(@event.chatroom) %>
       <%= link_to "Retirer du calendrier" ,  event_participant_path(@event),
       data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment retirer #{@event.name} de votre calendrier?"}%>
+    </div>
     <% end %>
   <% end %>
+  <div class="button-blueish">
+    <%= link_to "Voir tous les évènements", root_path, class: "show-back" %>
+  </div>
+  </div>
   </div>
   </div>
 </div>
