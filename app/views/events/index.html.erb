@@ -18,7 +18,7 @@
 
       <div class="profile-description">
         <p><%= current_user.description %></p>
-        <p><%= current_user.events.count %> participation à des évènements</p>
+        <p><%= Participant.where(user_id: current_user.id).count %> participation à des évènements</p>
       </div>
 
       <div class="profile-actions">

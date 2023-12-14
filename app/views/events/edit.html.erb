@@ -4,8 +4,12 @@
       <%= f.input :name %>
       <%= f.input :description %>
       <%= f.input :address %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
+      <%= f.input :start_date,
+        as: :string,
+        input_html: { data: { controller: "datepicker" } } %>
+      <%= f.input :end_date,
+        as: :string,
+        input_html: { data: { controller: "datepicker" } } %>
       <%= f.input :public %>
       <%= f.input :max_people %>
       <%= f.input :event_tag_ids,
