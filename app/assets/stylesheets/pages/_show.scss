@@ -32,8 +32,14 @@
 .show-event-title {
   text-align: center;
 }
+.show-event-infos {
+  font-size: 14px;
+   p{
+    margin-bottom: 0;
+   }
+}
 
-.show-back {
+.show-cta {
   text-decoration: none;
   text-align: center;
   color: #edf1f0;
@@ -49,7 +55,7 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
 
   a {
     text-align: center;
@@ -59,4 +65,31 @@
 
 .show-description {
   text-align: center;
+  margin-bottom: 0;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  font-size: 14px;
+}
+
+.show-interest {
+  font-size: 16px;
+}
+
+.show-event-tags{
+  margin-bottom: 1vh;
+}
+
+.show-tag {
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 0.1rem 0.5rem;
+  background-color: #ECEAFF;
+  color: #7E73FF;
+  border: 1px solid rgb(126, 115, 255);
+  margin-right: 9px;
+}
+
+.fa-calendar{
+  margin-left: 9px;
 }
