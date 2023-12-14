@@ -33,11 +33,11 @@
   text-align: center;
 }
 .show-event-infos {
+  font-size: 16px;
    p{
     margin-bottom: 0;
    }
 }
-
 
 .show-cta {
   text-decoration: none;
@@ -55,7 +55,7 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
 
   a {
     text-align: center;
@@ -65,10 +65,18 @@
 
 .show-description {
   text-align: center;
+  margin-bottom: 0;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  font-size: 16px;
 }
 
 .show-interest {
   font-size: 16px;
+}
+
+.show-event-tags{
+  margin-bottom: 1vh;
 }
 
 .show-tag {

@@ -11,8 +11,10 @@
     data-map-user-location-value="<%= session[:event].nil? ? [5.3699525 ,43.2961743] : [session[:event]["longitude"], session[:event]["latitude"]] %>">
   <div class="show-page-background"></div>
   <div class="show-page">
-
-  <h3 class="show-event-title"><%= @event.name %></h3>
+    <div class="show-event-title">
+      <h3><%= @event.name %></h3>
+      <p>créé par @<%= @event.user.username %></p>
+    </div>
   <div class="show-event-card">
     <div class="show-event-infos">
       <div class="show-event-tags">
@@ -22,13 +24,17 @@
         </div>
         <% end %>
       </div>
-      <p class="participants-count"><%= @event.participants.count %> participant(s)</p>
+      <% if @event.public %>
+        <p class="participants-count"><%= @event.participants.count %> participant(s)</p>
+      <% else %>
+        <p class="participants-count"><%= @event.participants.count %> participant(s) / <%= @event.max_people %> max.</p>
+      <% end %>
       <p class="show-start-date">Commence le <%= @event.start_date.strftime("%d/%m/%Y") %></p>
       <p class="show-start-time">A partir de <%= @event.start_date.strftime("%H:%M") %></p>
     </div>
     <img class="show-event-photo" src="" alt="Photo de l'évènement">
   </div>
-  <p class="show-description"><%= @event.description %></p>
+  <p class="show-description"><%= @event.description %><br><i class="fa-solid fa-location-dot"></i> <%= @event.address %></p>
   <div class="show-actions-container">
   <% if current_user == @event.user %>
   <div class="show-actions">
@@ -40,6 +46,7 @@
 
   <% else %>
     <% if Participant.where(user_id: current_user.id, event_id: @event.id).empty? %>
+    <p class="show-interest">Intéressé?</p>
     <div class="show-actions">
       <div class="button-blueish">
       <%= link_to "Ajouter au calendrier", event_participants_path(@event),
