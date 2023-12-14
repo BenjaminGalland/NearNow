@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  # skip_before_action :authenticate_user!, only: [ :index ]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -42,7 +42,7 @@ class EventsController < ApplicationController
       participant = Participant.new(user_id: current_user.id, event_id: @event.id)
       participant.save
       chatroom = Chatroom.create!(name: @event.name, event_id: @event.id)
-      redirect_to root_path
+      redirect_to event_path(@event)
     else
       render :new, status: :unprocessable_entity
     end

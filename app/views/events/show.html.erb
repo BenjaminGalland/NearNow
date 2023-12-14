@@ -1,6 +1,6 @@
 <div class="body-container">
   <div class="banner">
-    <h5>NEARNOW</h5>
+    <h5>NearNow</h5>
   </div>
   <% session[:event] = @event %>
   <div class="mapbox-design"
@@ -13,7 +13,10 @@
   <div class="show-page">
     <div class="show-event-title">
       <h3><%= @event.name %></h3>
-      <p>créé par @<%= @event.user.username %></p>
+      <div class="show-creator-address">
+        <p>créé par @<%= @event.user.username %> <br>
+        <i class="fa-solid fa-location-dot"></i> <%= @event.address %></p>
+      </div>
     </div>
   <div class="show-event-card">
     <div class="show-event-infos">
@@ -34,7 +37,7 @@
     </div>
     <img class="show-event-photo" src="" alt="Photo de l'évènement">
   </div>
-  <p class="show-description"><%= @event.description %><br><i class="fa-solid fa-location-dot"></i> <%= @event.address %></p>
+  <p class="show-description"><%= @event.description %></p>
   <div class="show-actions-container">
   <% if current_user == @event.user %>
   <div class="show-actions">
@@ -51,6 +54,7 @@
       <div class="button-blueish">
       <%= link_to "Ajouter au calendrier", event_participants_path(@event),
       data: {turbo_method: :post}, class:"show-cta"%>
+        <i class="fa-solid fa-calendar"></i>
       </div>
     </div>
     <% else %>
