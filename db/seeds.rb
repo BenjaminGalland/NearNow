@@ -89,7 +89,7 @@ event3 = Event.create(
   name: "Marché de Noël",
   start_date: DateTime.new(2023,12,22,18,15),
   end_date: DateTime.new(2023,12,25,23,00),
-  address: "Canebière 13001 Marseille",
+  address: "Place du Général-de-Gaulle 13001 Marseille",
   description: "Les cabanons de Noël sont de retours !",
   public: true,
   max_people: 0,
