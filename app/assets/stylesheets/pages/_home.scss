@@ -29,3 +29,29 @@
   margin-left: 8vh;
   height: 12vh;
 }
+
+.home-wrapper {
+  width: 100%;
+  min-height: 93vh;
+  background-image: image-url("NearNowBackgroundHome.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.content-home {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.homepage-link {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
