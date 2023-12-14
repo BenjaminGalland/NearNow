@@ -1,41 +1,88 @@
 .calendar-heading {
-  background-color: #52D169;
+  background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgba(31,126,224,1) 100%);
   font-weight: bold;
-  text-align: center;
+  height: 6vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .calendar {
-  background: #52D169;
+  background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgba(31,126,224,1) 100%);
   box-shadow: 0 0 20px #878787;
   text-align: center;
   border-radius: 4px;
 }
 
 .calendar-title {
-  padding-left: 16px;
-  padding-right: 20px;
-  font-size: 13px;
+  font-size: 2.8vh;
   font-weight: 600;
   color: #023a3f;
+  position: relative;
+  right: 6px;
 }
 
 .dashboard-title {
-  text-align: center;
-  font-weight: bold;
+  background: linear-gradient(233deg, rgba(31,126,224,1) 0%, rgba(23,213,67,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    height: 8vh;
+    font-size: 40px;
+  }
 }
 
 .dashboard-synopsis{
   font-size: 16px;
   height: 20vh;
 
+  p {
+    text-align: center;
+  }
+
 }
 
+.img-calendar {
+  width: 8vw;
+  height: 4vh;
+  max-width: 8vw;
+  max-height: 4vh;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.greetings-dashboard {
+  background-image: linear-gradient(233deg, #17d543 0%, #1f7ee0 100%);;
+  background-clip: text;
+  color: transparent;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.greetings-dashboard-paragraph {
+  font-size: 20px;
+}
+
+.carte {
+  height: 5vh;
+}
 
 .carte-text {
   color: black;
   font-weight: 600;
-
+  text-decoration: none;
 }
+
 .nav-link{
   width: 72px;
   height: 33px;
@@ -56,12 +103,20 @@
 
 
 .simple-calendar {
+
+  padding: 2px;
+
   .has-events {
     font-size: 10px;
   }
 
   .day {
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    max-width: 5vw;
+    max-height: 8vh;
   }
   .wday-0 {
     max-width: 5vw;
@@ -85,7 +140,7 @@
   }
   .wday-5 {
     max-width: 5vw;
-    max-width: 8vh;
+    max-height: 8vh;
   }
   .wday-6 {
     max-width: 5vw;
@@ -95,9 +150,12 @@
   .start-date {
     font-weight: bold;
     text-align: center;
-    font-size: 16px;
     color: #CA3C66;
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 5vw;
+    max-height: 8vh;
   }
 
   .today {
@@ -105,7 +163,7 @@
     text-align: center;
     background-color: rgb(112, 71, 235);
     color:#363B48;
-    background: #52D169;
+    background: radial-gradient(circle, rgba(124,180,45,1) 0%, rgba(28,173,49,1) 100%);;
 	}
 
   .prev-month {
