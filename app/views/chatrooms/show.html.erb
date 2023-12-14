@@ -21,6 +21,11 @@
     <%= f.submit "Envoyer", class: "btn btn-primary mb-3" %>
   <% end %>
 </div>
+<div class="chatroom-back">
+  <div class="button-blueish">
+    <%= link_to "Retour", event_path(@chatroom.event) %>
+  </div>
+</div>
 <% else %>
   <p>Vous n'avez pas accès à ce canal de discussion!</p>
 <% end %>
