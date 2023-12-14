@@ -21,7 +21,7 @@ toto = User.create(username: "toto", email: "toto@gmail.com", password: "azerty"
 puts "Create lewagon user"
 lewagon = User.create(username: "lewagon", email: "lewagon@gmail.com", password: "azerty", age: 29, location: "Marseille", description: "")
 puts "Create marseille user"
-marseille = User.create(username: "marseille", email: "marseille@gmail.com", password: "azerty", age: 2700, location: "Marseille", description: "")
+marseille = User.create(username: "marseille", email: "marseille@gmail.com", password: "azerty", age: 2700, location: "Marseille", description: "La plus belle ville du monde")
 puts "Create dylane user"
 dylane = User.create(username: "dylane", email: "dylane@gmail.com", password: "azerty", age: 27, location: "Marseille", description: "")
 
@@ -148,7 +148,7 @@ chatroom.save
 EventTag.create(event_id: event5.id, tag_id: technologie.id)
 EventTag.create(event_id: event5.id, tag_id: famille.id)
 
-26.times do
+16.times do
   Participant.create(user_id: toto.id, event_id: event5.id)
 end
 
