@@ -1,6 +1,6 @@
 <div class="body-container">
   <div class="banner">
-    <h5>NEARNOW</h5>
+    <h5>NearNow</h5>
   </div>
   <% session[:event] = @event %>
   <div class="mapbox-design"
@@ -11,16 +11,27 @@
     data-map-user-location-value="<%= session[:event].nil? ? [5.3699525 ,43.2961743] : [session[:event]["longitude"], session[:event]["latitude"]] %>">
   <div class="show-page-background"></div>
   <div class="show-page">
-
-  <h3 class="show-event-title"><%= @event.name %></h3>
+    <div class="show-event-title">
+      <h3><%= @event.name %></h3>
+      <div class="show-creator-address">
+        <p>créé par @<%= @event.user.username %> <br>
+        <i class="fa-solid fa-location-dot"></i> <%= @event.address %></p>
+      </div>
+    </div>
   <div class="show-event-card">
     <div class="show-event-infos">
       <div class="show-event-tags">
         <% @event.tags.each do |tag| %>
+        <div class="show-tag">
           <%= tag.name %>
+        </div>
         <% end %>
       </div>
-      <p class="participants-count"><%= @event.participants.count %> participant(s)</p>
+      <% if @event.public %>
+        <p class="participants-count"><%= @event.participants.count %> participant(s)</p>
+      <% else %>
+        <p class="participants-count"><%= @event.participants.count %> participant(s) / <%= @event.max_people %> max.</p>
+      <% end %>
       <p class="show-start-date">Commence le <%= @event.start_date.strftime("%d/%m/%Y") %></p>
       <p class="show-start-time">A partir de <%= @event.start_date.strftime("%H:%M") %></p>
     </div>
@@ -38,9 +49,13 @@
 
   <% else %>
     <% if Participant.where(user_id: current_user.id, event_id: @event.id).empty? %>
+    <p class="show-interest">Intéressé?</p>
     <div class="show-actions">
+      <div class="button-blueish">
       <%= link_to "Ajouter au calendrier", event_participants_path(@event),
-      data: {turbo_method: :post}%>
+      data: {turbo_method: :post}, class:"show-cta"%>
+        <i class="fa-solid fa-calendar"></i>
+      </div>
     </div>
     <% else %>
     <div class="show-actions">
@@ -50,8 +65,6 @@
     </div>
     <% end %>
   <% end %>
-  <div class="button-blueish">
-    <%= link_to "Voir tous les évènements", root_path, class: "show-back" %>
   </div>
   </div>
   </div>
