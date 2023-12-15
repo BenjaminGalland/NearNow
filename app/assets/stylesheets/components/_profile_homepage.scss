@@ -1,17 +1,9 @@
 .profile-infos {
-  background-color: rgb(255, 255, 255);
   padding: 2vh;
-  margin-top: 2vh;
   margin-right: 2vh;
   margin-left: 2vh;
-  border-radius: 30px 30px 5px 5px;
-  align-items: center;
-}
-
-.profile-infos h5 {
-  margin-bottom: 5px;
-  padding-top: 1vh;
-  padding-left:2vh;
+  // border-radius: 30px 30px 5px 5px;
+  // align-items: center;
 }
 
 .profile-infos p {
@@ -21,29 +13,36 @@
 
 .username {
   font-family: $username-font;
+  flex-grow: 1;
+  margin-left: 3vw;
+  margin-top: 1vh;
 }
 
-.username-description {
-  font-family: $username-description-font;
-
+.homepage-photo {
+  width: 25vw;
+  height: 11vh;
+  border-radius: 50%;
+  border: 5px solid white;
 }
+
+// .username-photo {
+// }
 
 .profile-homepage-description {
-  background-color: #fff;
-  padding: 2vh;
-  margin-right: 2vh;
-  margin-left: 2vh;
-  border-radius: 5px 5px 30px 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(255, 255, 255);
-  text-align: centerrgb(255, 255, 255);
+  text-align: justify;
+  position: absolute;
+  padding-left: 38vw;
+  padding-bottom: 5vh;
   font-family: $profile-homepage-description-font;
 }
 
 .profile-homepage-description h3 {
-  color: #333;
+  color: #000000;
 }
 
 .profile-homepage-description p {
   margin: 0;
+  font-size: 1.0rem;
+  padding-top: 2vh;
+  padding-right: 3vw;
 }
