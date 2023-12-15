@@ -85,11 +85,6 @@
   text-decoration: none;
 }
 
-.container-fluid {
-  background: rgb(159, 163, 160);
-}
-
-
 
 .simple-calendar {
   padding: 2px;
@@ -175,7 +170,7 @@
     font-weight: bold;
     text-align: center;
     color:#363B48;
-    background: linear-gradient(270deg, rgba(218,14,14,1) 0%, rgba(224,170,43,1) 47%, rgba(231,219,76,1) 100%);
+    background: rgba(24,174,189,1);
 	}
 
   .prev-month {
