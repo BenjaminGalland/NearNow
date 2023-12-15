@@ -24,6 +24,8 @@ puts "Create marseille user"
 marseille = User.create(username: "marseille", email: "marseille@gmail.com", password: "azerty", age: 2700, location: "Marseille", description: "La plus belle ville du monde")
 puts "Create dylane user"
 dylane = User.create(username: "dylane", email: "dylane@gmail.com", password: "azerty", age: 27, location: "Marseille", description: "")
+puts "Create t0t0 user"
+t0t0 = User.create(username: "t0t0", email: "t0t0@gmail.com", password: "azerty", age: 29, location: "", description: "Antoine et Théo m'ont séquestré pendant si longtemps, maintenant à moi la liberté !")
 
 puts "Create tags --------------"
 technologie = Tag.create(name: "Technologie")
