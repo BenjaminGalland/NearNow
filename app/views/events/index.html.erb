@@ -15,12 +15,15 @@
         <div class="username">
           <h5> @<%= current_user.username %></h5>
         </div>
-        <div class="username-description">
-          <p><%= current_user.description%></p>
+
+        <div class="username-photo">
+          <%= image_tag "Monamidiego.jpg", class: "homepage-photo" %>
         </div>
+
       </div>
 
       <div class="profile-homepage-description">
+        <p><%= current_user.description%></p>
         <p><%= Participant.where(user_id: current_user.id).count %> participation à des évènements</p>
       </div>
 
