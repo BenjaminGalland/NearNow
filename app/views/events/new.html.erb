@@ -2,7 +2,7 @@
   <h4>Créer un évènement</h4>
 </div>
 
-<div class="container-heba form-color">
+<div class="container-heba form-color" data-controller="toggle-maxpeople">
   <%= simple_form_for @event, class: "form-content" do |f| %>
     <div class="top-space">
       <%= f.input :name, label: "Nom" %>
@@ -17,8 +17,8 @@
         as: :string,
         label: "Date de fin",
         input_html: { data: { controller: "datepicker" } }%>
-      <%= f.input :public %>
-      <%= f.input :max_people, label: "Maximum de participants", input_html: {value: '100'}%>
+      <%= f.input :public , input_html:{ data: { action:"click->toggle-maxpeople#toggle" }}%>
+      <%= f.input :max_people, label: "Maximum de participants", input_html: {value: '100', data: { toggle_maxpeople_target: "input"}}%>
 
       <div class="form-tags">
         <%= f.input :event_tag_ids,
