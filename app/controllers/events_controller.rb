@@ -4,6 +4,11 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    if params[:query]
+      @events = Event.global_search(params[:query])
+    end
+
+    @tags = Tag.all
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
