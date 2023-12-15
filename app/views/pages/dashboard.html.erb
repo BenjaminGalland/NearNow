@@ -15,7 +15,9 @@
       <h5> <%= date.day %> </h5>
     <%# <div class="card-img"> %>
       <% events.each do |event| %>
-        <%= event.name %>
+        <div class="calendar-infobulle">
+          <%= event.name.split(" ").first %>
+        </div>
       <% end %>
         <%# <%= image_tag "Monamidiego.jpg", class: "img-calendar" %>
         <%# </div> %>
