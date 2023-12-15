@@ -2,13 +2,29 @@
   <div class="banner">
     <h5>NearNow</h5>
   </div>
+
   <div class="mapbox-design"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
     data-map-page-value="index"
     data-map-user-location-value="<%= session[:event].nil? ? [5.3699525 ,43.2961743] : [session[:event]["longitude"], session[:event]["latitude"]] %>">
-
+  <div class="index-tags-container">
+    <div class="index-tags">
+          <div class="index-tag">
+            <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+              <%= submit_tag "Tous", class:"index-btn-tag"%>
+            <% end %>
+          </div>
+        <% @tags.each do |tag| %>
+        <div class="index-tag">
+            <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+              <%= submit_tag tag.name, name: "query", class:"index-btn-tag" %>
+            <% end %>
+        </div>
+        <% end %>
+    </div>
+  </div>
   <% if user_signed_in? %>
     <div class="profile-page">
       <div class="profile-infos">

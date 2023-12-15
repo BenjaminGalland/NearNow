@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  # skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
   end
@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @events = []
     participations.each do |participation|
       @events << Event.find(participation[:event_id])
+      
     end
   end
 end
