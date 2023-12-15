@@ -28,12 +28,13 @@
   text-decoration: none;
   padding: 20px 40px;
   color: #fff;
-  // background-image: linear-gradient(270deg, #17d543 0%, #1f7ee0 100%);
-  background: $button-color;
+  background: #0580c7;
   font-size: 20px;
   border-radius: 36px;
   width: 80%;
   font-weight: 600;
+  position: absolute;
+  top: 70vh;
 
 }
 
