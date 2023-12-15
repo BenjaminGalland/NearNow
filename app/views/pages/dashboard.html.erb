@@ -11,10 +11,15 @@
     </div>
 
 
-    <%= month_calendar(events: @events) do |date| %>
+    <%= month_calendar(events: @events) do |date, events| %>
       <h5> <%= date.day %> </h5>
     <%# <div class="card-img"> %>
-        <%= image_tag "Monamidiego.jpg", class: "img-calendar" %>
+      <% events.each do |event| %>
+        <div class="calendar-infobulle">
+          <%= event.name.split(" ").first %>
+        </div>
+      <% end %>
+        <%# <%= image_tag "Monamidiego.jpg", class: "img-calendar" %>
         <%# </div> %>
     <% end %>
   </div>
