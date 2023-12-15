@@ -10,21 +10,25 @@
       <span class="greetings-dashboard-paragraph">Prêt à sortir?</span></p>
     </div>
 
+    <div class="whole-calendar" data-controller="calendar-popup" data-calendar-popup-events-value="<%= @events.to_json%>">
+      <%= month_calendar(events: @events) do |date, events| %>
+        <h5> <%= date.day %> </h5>
+        <% events.each do |event| %>
+          <div class="calendar-infobulle"
+            data-action="click->calendar-popup#fire"
+            data-calendar-popup-target="event"
+            data-eventid="<%= event.id%>"
+            >
 
-    <%= month_calendar(events: @events) do |date, events| %>
-      <h5> <%= date.day %> </h5>
-    <%# <div class="card-img"> %>
-      <% events.each do |event| %>
-        <div class="calendar-infobulle">
-          <%= event.name.split(" ").first %>
-        </div>
+            <%= event.name.split(" ").first %>
+          </div>
+        <% end %>
       <% end %>
-        <%# <%= image_tag "Monamidiego.jpg", class: "img-calendar" %>
-        <%# </div> %>
-    <% end %>
+
+      <div data-calendar-popup-target="eventpopup" class="event-popup">
+     
+      </div>
+    </div>
   </div>
 
-  <div class="carte">
-    <%# <%= link_to "Retour à la carte", root_path, class: "carte-text" %>
-  </div>
 </div>

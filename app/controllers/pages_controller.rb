@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @events = []
     participations.each do |participation|
       @events << Event.find(participation[:event_id])
+      
     end
   end
 end
