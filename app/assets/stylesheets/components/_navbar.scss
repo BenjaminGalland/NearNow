@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  background: linear-gradient(233deg, rgba(31,126,224,1) 0%, rgba(23,213,67,1) 100%);
+  background: $background-color;
   width: 100%;
   max-height: 7vh;
 
@@ -11,7 +11,7 @@
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(233deg, rgba(31,126,224,1) 0%, rgba(23,213,67,1) 100%);
+    background: $background-color;
   }
 
   a.nav-link {
@@ -31,7 +31,7 @@
 }
 
 #logout {
-  background: linear-gradient(270deg, rgba(182,164,72,1) 0%, rgba(189,65,24,1) 82%);
+  background: #B76D68;
   padding: 8px 16px;
   border-radius: 20px;
   color: white;
@@ -40,7 +40,8 @@
 }
 
 #accueil {
-  background: linear-gradient(270deg, rgba(72,80,182,1) 0%, rgba(24,174,189,1) 100%);
+  // background: linear-gradient(270deg, rgba(72,80,182,1) 0%, rgba(24,174,189,1) 100%);
+  background: #1a3d9c;
   padding: 8px 16px;
   border-radius: 20px;
   color: white;

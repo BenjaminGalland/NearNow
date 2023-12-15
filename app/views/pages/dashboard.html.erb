@@ -4,7 +4,6 @@
     <h1>Dashboard</h1>
   </div>
 
-  <div class="dashboard-wrapper">
     <div class="dashboard-synopsis">
       <p> <span class="greetings-dashboard">Hey <strong><%= current_user.username %></strong> !</span> <br>
       <span class="greetings-dashboard-paragraph">Prêt à sortir?</span></p>
@@ -26,9 +25,8 @@
       <% end %>
 
       <div data-calendar-popup-target="eventpopup" class="event-popup">
-     
+        <%# Ici il y a les events-infos  %>
       </div>
-    </div>
-  </div>
 
+    </div>
 </div>

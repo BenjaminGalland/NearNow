@@ -1,5 +1,6 @@
 .calendar-heading {
-  background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgba(31,126,224,1) 100%);
+  // background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgba(31,126,224,1) 100%);
+  background: $background-color;
   font-weight: bold;
   height: 6vh;
   display: flex;
@@ -14,7 +15,7 @@
 }
 
 .calendar {
-  background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgba(31,126,224,1) 100%);
+  background: $background-color;
   box-shadow: 0 0 20px #878787;
   text-align: center;
   border-radius: 4px;
@@ -29,7 +30,7 @@
 }
 
 .dashboard-title {
-  background: linear-gradient(233deg, rgba(31,126,224,1) 0%, rgba(23,213,67,1) 100%);
+  background: $background-color;
   display: flex;
   justify-content: center;
   align-items: center;
