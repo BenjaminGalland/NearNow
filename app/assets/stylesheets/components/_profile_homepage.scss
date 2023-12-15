@@ -6,12 +6,6 @@
   // align-items: center;
 }
 
-.profile-infos h5 {
-  padding-left: 2vh;
-  margin-left: -63vw;
-  padding-top: 2vh;
-}
-
 .profile-infos p {
   margin: 0;
   padding-left: 7vh;
@@ -19,19 +13,20 @@
 
 .username {
   font-family: $username-font;
-  text-align: center;
+  flex-grow: 1;
+  margin-left: 3vw;
+  margin-top: 1vh;
 }
 
 .homepage-photo {
-  width: 27vw;
-  height: 12vh;
+  width: 25vw;
+  height: 11vh;
   border-radius: 50%;
   border: 5px solid white;
 }
 
-.username-photo {
-  margin-left: -85vh;
-}
+// .username-photo {
+// }
 
 .profile-homepage-description {
   text-align: justify;

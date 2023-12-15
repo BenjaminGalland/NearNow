@@ -12,13 +12,14 @@
   <% if user_signed_in? %>
     <div class="profile-page">
       <div class="profile-infos">
+        <div class="username-photo">
+          <%= image_tag "photo-toto.jpg", class: "homepage-photo" %>
+        </div>
+
         <div class="username">
           <h5> @<%= current_user.username %></h5>
         </div>
 
-        <div class="username-photo">
-          <%= image_tag "Monamidiego.jpg", class: "homepage-photo" %>
-        </div>
 
       </div>
 
