@@ -1,5 +1,4 @@
 .calendar-heading {
-  // background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgba(31,126,224,1) 100%);
   background: $background-color;
   font-weight: bold;
   height: 6vh;
@@ -41,6 +40,8 @@
     font-weight: bold;
     height: 8vh;
     font-size: 40px;
+    position: relative;
+    top: 1.5vh;
   }
 }
 
@@ -78,6 +79,13 @@
 .event-popup {
   padding-left: 4vw;
   height: 22.5vh;
+  overflow-y: scroll;
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10vh;
+  }
 }
 
 .carte-text {
@@ -103,6 +111,7 @@
 
     th {
       border: none;
+      text-align: center;
     }
   }
 
@@ -186,4 +195,8 @@
 
   }
 
+}
+
+.calendar-infobulle {
+  font-weight: 600 ;
 }
