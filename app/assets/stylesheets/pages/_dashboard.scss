@@ -85,6 +85,11 @@
   }
 }
 
+.dashb-no-event-created{
+  text-align: center;
+  font-family: $username-font;
+}
+
 .dashb-events-created {
   display: flex;
   overflow-x: scroll;
