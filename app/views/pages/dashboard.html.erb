@@ -9,7 +9,24 @@
       <p> <span class="greetings-dashboard">Hey <strong><%= current_user.username %></strong> !</span> <br>
       <span class="greetings-dashboard-paragraph">Prêt à sortir?</span></p>
     </div>
-
+    <div class="dashb-events-created-container">
+      <h3>Vos évènements créés</h3>
+      <div class="dashb-events-created">
+        <% @events_created.each do |event| %>
+          <div class="dashb-event-created">
+            <% if event.photo.attached? %>
+            <div class="dashb-event-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key %>')">
+              <%= event.name %>
+            </div>
+            <% else %>
+            <div class="dashb-event-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+              <%= event.name %>
+            </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
     <div class="whole-calendar" data-controller="calendar-popup" data-calendar-popup-events-value="<%= @events.to_json%>">
       <%= month_calendar(events: @events) do |date, events| %>
         <h5> <%= date.day %> </h5>
