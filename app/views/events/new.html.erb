@@ -1,5 +1,5 @@
 <div class="title-create">
-  <h4>Créer un évènement <i class="fa-regular fa-compass"></i></h4>
+  <h4>Créer un évènement <i class="fa-regular fa-compass rotating"></i></h4>
 
 </div>
 
@@ -10,6 +10,7 @@
     </div>
       <%= f.input :description, label: "Description" %>
       <%= f.input :address, label: "Adresse" %>
+      <%= f.input :photo, as: :file %>
       <%= f.input :start_date,
         as: :string,
         label: "Date de début",
