@@ -1,9 +1,10 @@
 .button-blueish {
+  z-index: 8;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  background: $button-color;
+  background: $background-color;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 40px;
   width: fit-content;
