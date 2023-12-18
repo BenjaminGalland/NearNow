@@ -1,7 +1,6 @@
 .container-heba {
-  overflow-y: scroll;
   max-width: 80vw;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -9,10 +8,8 @@
   align-content: center;
   box-sizing: border-box;
   border-radius: 16px;
-  margin-bottom: 4vh;
-  padding-top: 14vh;
-  margin-top: 4vh;
-  padding-bottom: 2vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 #new_event {
