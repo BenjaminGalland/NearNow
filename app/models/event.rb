@@ -58,12 +58,12 @@ class Event < ApplicationRecord
 
     else
       classes << 'private'
-      classes << 'small-marker' if self.participants.count <= 9
-      classes << 'medium-marker' if self.participants.count <= 19 && self.participants.count >= 10
-      classes << 'large-marker' if self.participants.count <= 29 && self.participants.count >= 20
-      classes << 'very-large-marker' if self.participants.count <= 39 && self.participants.count >= 30
-      classes << 'big-marker' if self.participants.count <= 49 && self.participants.count >= 40
-      classes << 'very-big-marker' if self.participants.count >= 50
+      classes << 'small-marker' if self.participants.count <= 3
+      classes << 'medium-marker' if self.participants.count <= 6 && self.participants.count >= 4
+      classes << 'large-marker' if self.participants.count <= 11 && self.participants.count >= 7
+      classes << 'very-large-marker' if self.participants.count <= 17 && self.participants.count >= 12
+      classes << 'big-marker' if self.participants.count <= 25 && self.participants.count >= 18
+      classes << 'very-big-marker' if self.participants.count >= 26
 
     end
     classes.join(' ')

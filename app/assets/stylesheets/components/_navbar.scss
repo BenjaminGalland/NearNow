@@ -2,8 +2,6 @@
   background-color: #edf1f0;
   width: 100%;
   max-height: 7vh;
-  // border-top: 1px solid #cacaca;
-
 }
 
 .navbar {
@@ -18,7 +16,6 @@
   a.nav-link {
     font-size: 16px;
     font-weight: 500;
-
   }
 }
 
@@ -47,6 +44,10 @@
   color: white;
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+logout-nav-link {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-lewagon .navbar-collapse {

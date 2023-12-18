@@ -3,7 +3,7 @@
     <%= link_to "", events_path, class: "navbar-brand fa-solid fa-house", id: "accueil" %>
 
         <% if user_signed_in? %>
-              <%= link_to "", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link fa-solid fa-right-from-bracket", id: "logout" %>
+              <%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link", id: "logout" %>
         <% else %>
             <div class=>
               <%= link_to "Login", new_user_session_path, class: "nav-link", id: "login" %>
