@@ -1,13 +1,18 @@
 .container-heba {
+  overflow-y: scroll;
   max-width: 80vw;
-  height: 105vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   margin: 0 auto;
   box-shadow: rgba(126, 115, 255, 0.35) 0px 5px 15px;
   align-content: center;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 16px;
+  margin-bottom: 4vh;
+  padding-top: 14vh;
+  margin-top: 4vh;
+  padding-bottom: 2vh;
 }
 
 .edit-form {

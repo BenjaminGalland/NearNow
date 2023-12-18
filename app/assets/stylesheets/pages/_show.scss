@@ -2,7 +2,7 @@
   z-index : 5;
   width: 100%;
   position: absolute;
-  min-height: 40vh;
+  max-height: 40vh;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   background-color: #edf1f0;
@@ -11,30 +11,35 @@
   justify-content: space-around;
   bottom: 0;
   font-family: $username-font;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.show-page-background {
-  z-index: 4;
-  width: 100.5vw;
-  position: absolute;
-  min-height: 40.4vh;
-  bottom: 0;
-  left: -0.25vw;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  background: $background-color;
-}
+// .show-page-background {
+//   z-index: 4;
+//   width: 100.5vw;
+//   position: absolute;
+//   min-height: 40vh;
+//   bottom: 0;
+//   left: -0.25vw;
+//   border-top-right-radius: 50px;
+//   border-top-left-radius: 50px;
+//   background: $background-color;
+// }
 
 .show-event-card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .show-event-title {
+  padding-top: 1vh;
   text-align: center;
 }
 .show-event-infos {
-  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 16px;
    p{
     margin-bottom: 0;
    }
@@ -44,6 +49,10 @@
   text-decoration: none;
   text-align: center;
   color: #edf1f0;
+}
+
+.show-creator-address {
+  font-size: 16px
 }
 
 .show-actions-container{
@@ -57,6 +66,7 @@
   justify-content: space-around;
   width: 100%;
   font-size: 18px;
+  padding-bottom: 1vh;
 
   a {
     text-align: center;
@@ -66,15 +76,18 @@
 
 .show-description {
   text-align: center;
-  margin-bottom: 0;
-  padding-right: 10vw;
-  padding-left: 10vw;
-  font-size: 14px;
+  font-size: 16px;
+  margin-top: 1vh;
+  overflow-y: scroll;
+  max-height: 8vh;
+  margin-bottom: 1vh;
+  margin-left: 6vw;
+  margin-right: 6vw;
 }
 
-.show-interest {
-  font-size: 16px;
-}
+// .show-interest {
+//   font-size: 16px;
+// }
 
 .show-event-tags{
   margin-bottom: 1vh;
@@ -93,4 +106,19 @@
 
 .fa-calendar{
   margin-left: 9px;
+}
+
+.datetime-show-start {
+  font-weight: 600;
+  color: green;
+}
+
+.datetime-show-end {
+  font-weight: 600;
+  color: red;
+}
+
+.nb-participants-bold {
+  font-weight: 600;
+  font-size: 14px;
 }
