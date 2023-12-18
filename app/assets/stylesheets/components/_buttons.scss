@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  // background: linear-gradient(233deg, rgba(23,213,67,1) 0%, rgb(31, 126, 224) 100%);
   background: $button-color;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 40px;
@@ -19,10 +18,12 @@
 
 .button-login {
   width: 90vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 0 auto;
 }
 
 .event-link-button {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -36,24 +37,4 @@
   position: absolute;
   top: 70vh;
 
-}
-
-
-.button-green {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background: rgb(82,209,105);
-  background: radial-gradient(circle, #41e53e 0%, #1bb316 100%);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 40px;
-  width: fit-content;
-  height: 60px;
-  font-size: 16px;
-  color: white;
-  letter-spacing: 1px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  padding: 0 20px;
 }
