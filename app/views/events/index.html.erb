@@ -41,8 +41,8 @@
       </div>
 
       <div class="profile-homepage-description">
-        <p><%= current_user.description%></p>
-        <p><%= Participant.where(user_id: current_user.id).count %> participation à des évènements</p>
+        <p class="description-text"><%= current_user.description%></p>
+        <p class="participation-text"><span class="embed-participation"><%= Participant.where(user_id: current_user.id).count %></span> participation(s) à des évènements</p>
       </div>
 
       <div class="profile-actions">
