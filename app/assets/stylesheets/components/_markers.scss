@@ -4,8 +4,12 @@
 
 }
 
-.event {
+// .mapboxgl-marker {
 
+// }
+
+.event-marker {
+  animation: GrowUp 2s ease-out forwards;
   border-radius: 50%;
   &.public {
 
@@ -41,4 +45,22 @@
     width: 55px;
   }
 
+}
+
+@keyframes GrowUp {
+  0% {
+    scale: 0;
+  }
+
+  50% {
+    scale: 1.3;
+  }
+
+  75% {
+    scale:1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
 }

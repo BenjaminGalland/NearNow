@@ -1,5 +1,5 @@
 
-<div class="event <%= event.marker_class %>">
+<div data-controller="markerspulse" class="event-marker marker-animate<%= event.marker_class %>">
   <% if event.public %>
     <%= image_tag "markers/publiciconnearnow2.png" %>
   <% else %>

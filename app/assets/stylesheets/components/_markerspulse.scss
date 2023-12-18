@@ -1,0 +1,14 @@
+@keyframes pulseMarker {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+.event-marker {
+  width: 3px;
+  height: 3px;
+}
+
+.marker-animate {
+  animation: pulseMarker 2s ease-in-out;
+}
