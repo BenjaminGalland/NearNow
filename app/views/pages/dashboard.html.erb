@@ -15,17 +15,22 @@
         <% @events_created.each do |event| %>
           <div class="dashb-event-created">
             <% if event.photo.attached? %>
-            <div class="dashb-event-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key %>')">
-              <%= event.name %>
-            </div>
+              <%= link_to event_path(event) do %>
+                <div class="dashb-event-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path event.photo.key %>')">
+                  <%= event.name %>
+                <% end %>
+                </div>
             <% else %>
-            <div class="dashb-event-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-              <%= event.name %>
+              <%= link_to event_path(event) do%>
+                <div class="dashb-event-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+                <%= event.name %>
+                <% end %>
             </div>
             <% end %>
           </div>
         <% end %>
       </div>
+      <h3>Vos évènements à venir</h3>
     </div>
     <div class="whole-calendar" data-controller="calendar-popup" data-calendar-popup-events-value="<%= @events.to_json%>">
       <%= month_calendar(events: @events) do |date, events| %>

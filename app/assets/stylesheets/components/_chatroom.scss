@@ -29,6 +29,18 @@
   }
 }
 
+.message-div {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.from-msg {
+  background-color: aqua;
+}
+
+.incoming-msg {
+  background-color: aquamarine;
+}
+
 .chatroom-back {
   display: flex;
   justify-content: center;

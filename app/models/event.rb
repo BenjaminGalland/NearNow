@@ -31,7 +31,7 @@ class Event < ApplicationRecord
   end
 
   def date_cannot_be_in_the_past
-    if start_date.present? && start_date < Date.today
+    if start_date.present? && start_date < DateTime.now
       errors.add(:start_date, "can't be in the past!")
     end
   end
