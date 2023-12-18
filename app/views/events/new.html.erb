@@ -9,7 +9,9 @@
       <%= f.input :name, label: "Nom" %>
     </div>
       <%= f.input :description, label: "Description" %>
-      <%= f.input :address, label: "Adresse" %>
+      <%= f.input :address, label: "Adresse",
+        input_html: {data: {address_autocomplete_target: "address"} , class: "d-none"},
+        wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
       <%= f.input :start_date,
         as: :string,
         label: "Date de début",
@@ -19,7 +21,7 @@
         label: "Date de fin",
         input_html: { data: { controller: "datepicker" } }%>
       <%= f.input :public , input_html:{ data: { action:"click->toggle-maxpeople#toggle" }}%>
-      <%= f.input :max_people, label: "Maximum de participants", input_html: {value: '100', data: { toggle_maxpeople_target: "input"}}%>
+      <%= f.input :max_people, label: "Maximum de participants", input_html: {value: '5', data: { toggle_maxpeople_target: "input"}}%>
 
       <div class="form-tags">
         <%= f.input :event_tag_ids,

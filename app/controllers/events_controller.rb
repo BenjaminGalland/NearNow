@@ -74,7 +74,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to root_path, status: :see_other
+    redirect_to events_path, status: :see_other
   end
 
   private
@@ -84,6 +84,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :start_date, :end_date, :descritpion, :address, :public, :max_people, :event_tag_ids)
+    params.require(:event).permit(:name, :start_date, :end_date, :description, :address, :public, :max_people, :event_tag_ids)
   end
 end
