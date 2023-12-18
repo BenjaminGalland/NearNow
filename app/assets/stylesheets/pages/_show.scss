@@ -97,11 +97,11 @@
 
 .show-tag {
   display: inline-block;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 0.1rem 0.5rem;
-  background-color: #ECEAFF;
-  color: #7E73FF;
+  font-size: 15px;
+  border-radius: 16px;
+  padding: 0.2rem 0.6rem;
+  background-color: $button-color;
+  color: white;
   border: 1px solid rgb(126, 115, 255);
   margin-right: 9px;
   position: relative;

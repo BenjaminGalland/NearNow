@@ -34,6 +34,7 @@
   width: 100%;
   min-height: 93vh;
   background-image: image-url("NearNowBackgroundHome.png");
+
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -48,7 +49,6 @@
 }
 
 .homepage-link {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
