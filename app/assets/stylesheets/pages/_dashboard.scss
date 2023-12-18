@@ -76,6 +76,48 @@
   font-size: 20px;
 }
 
+.dashb-events-created-container{
+  padding-left: 4vw;
+
+  h3{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+}
+
+.dashb-events-created {
+  display: flex;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.dashb-event-created{
+  margin-right: 9px;
+}
+
+.dashb-event-card {
+  background-size: cover;
+  background-position: center;
+  height: 90px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 5px;
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+}
+
 .event-popup {
   padding-left: 4vw;
   height: 22.5vh;

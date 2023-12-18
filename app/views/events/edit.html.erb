@@ -1,24 +1,35 @@
+
 <% if current_user == @event.user %>
-  <h1>Modifier <%= @event.name %></h1>
-  <%= simple_form_for @event do |f|%>
-      <%= f.input :name %>
+  <div class="title-create">
+    <h5>Modifier <%= @event.name %> <i class="fa-regular fa-compass"></i></h4>
+  </div>
+  <div class="container-heba form-color edit-form">
+  <%= simple_form_for @event, class: "form-content"  do |f|%>
+      <div class="top-space">
+      <%= f.input :name, label: "Nom"%>
+      </div>
       <%= f.input :description %>
-      <%= f.input :address %>
-      <%= f.input :start_date,
+      <%= f.input :address , label: "Adresse"%>
+      <%= f.input :start_date, label: "Date de début",
         as: :string,
-        input_html: { data: { controller: "datepicker" } } %>
-      <%= f.input :end_date,
+        input_html: { data: { controller: "datepicker", datepicker_date_value: @event.start_date } } %>
+      <%= f.input :end_date, label: "Date de fin",
         as: :string,
-        input_html: { data: { controller: "datepicker" } } %>
+        input_html: { data: { controller: "datepicker", datepicker_date_value: @event.end_date } } %>
       <%= f.input :public %>
-      <%= f.input :max_people %>
+      <%= f.input :max_people , label: "Maximum de participants"%>
       <%= f.input :event_tag_ids,
         collection: Tag.all,
         as: :check_boxes,
         required: true,
+        input_html: { class: "tag-selector" },
+        item_wrapper_class: 'form-tags',
         checked: @event.tags.map {|tag| tag.id }
       %>
-      <%= f.submit %>
+      <div class="submit-button-formulaire">
+      <%= f.submit class: "submit-btn", value: "Modifier"%>
+      </div>
+  </div>
   <% end %>
 <% else %>
   <p>Vous ne pouvez pas modifier cet évènement!</p>
