@@ -11,6 +11,9 @@
     </div>
     <div class="dashb-events-created-container">
       <h3>Vos évènements créés</h3>
+      <% if @events_created.empty? %>
+        <p class="dashb-no-event-created">Vous n'avez pas encore créé d'évènements!</p>
+      <% else %>
       <div class="dashb-events-created">
         <% @events_created.each do |event| %>
           <div class="dashb-event-created">
@@ -30,6 +33,7 @@
           </div>
         <% end %>
       </div>
+      <% end %>
       <h3>Vos évènements à venir</h3>
     </div>
     <div class="whole-calendar" data-controller="calendar-popup" data-calendar-popup-events-value="<%= @events.to_json%>">
