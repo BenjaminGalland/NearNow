@@ -9,12 +9,13 @@ export default class extends Controller {
   }
 
   connect() {
+
     if (this.dateValue) {
       flatpickr(this.element, {
         enableTime: true,
         time_24hr: true,
-        dateFormat: "d-m-Y H:i",
-        defaultDate: "today"
+        dateFormat: "Y-m-d H:i",
+        defaultDate: this.dateValue
       })
 
     } else {
