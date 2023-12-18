@@ -1,12 +1,16 @@
 .profile-infos {
   padding: 2vh;
   margin-right: 2vh;
-  margin-left: 2vh; 
+  margin-left: 2vh;
+  position: relative;
+  left: -18px;
+  top: -16px;
 }
 
 .profile-infos p {
   margin: 0;
   padding-left: 7vh;
+
 }
 
 .username {
@@ -21,16 +25,14 @@
   height: 11vh;
   border-radius: 50%;
   border: 5px solid white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-// .username-photo {
-// }
 
 .profile-homepage-description {
   text-align: justify;
   position: absolute;
-  padding-left: 38vw;
-  padding-bottom: 5vh;
+  padding-left: 33vw;
+  padding-bottom: 6vh;
   font-family: $profile-homepage-description-font;
 }
 
@@ -38,9 +40,16 @@
   color: #000000;
 }
 
-.profile-homepage-description p {
-  margin: 0;
-  font-size: 1.0rem;
+.profile-homepage-description {
+  font-size: 16px;
   padding-top: 2vh;
+}
+
+.description-text {
+  font-size: 16px;
   padding-right: 3vw;
+}
+
+.embed-participation {
+  font-weight: 600;
 }

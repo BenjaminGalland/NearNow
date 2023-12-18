@@ -69,6 +69,7 @@
   padding-bottom: 1vh;
 
   a {
+    font-weight: 600;
     text-align: center;
     text-decoration: none;
   }
@@ -91,6 +92,7 @@
 
 .show-event-tags{
   margin-bottom: 1vh;
+
 }
 
 .show-tag {
@@ -102,6 +104,8 @@
   color: #7E73FF;
   border: 1px solid rgb(126, 115, 255);
   margin-right: 9px;
+  position: relative;
+  top: -4px;
 }
 
 .fa-calendar{
