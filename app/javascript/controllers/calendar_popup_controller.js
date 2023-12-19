@@ -12,22 +12,27 @@ export default class extends Controller {
 
   fire(e) {
     this.eventpopupTarget.innerHTML = ""
+    const dayEvents = JSON.parse(e.target.dataset.dayevents)
 
-    const eventId = parseInt(e.target.dataset.eventid, 10)
-    const event = this.eventsValue.find(event => event.id === eventId)
-    const event_name = event.name
-    const event_description = event.description
-    const event_address = event.address
+    document.querySelectorAll(".day").forEach((day) => {
+      day.classList.remove("case-selected")
+    })
+    const calendar_box = e.target.closest(".day")
+    calendar_box.classList.add("case-selected")
 
-    const eventPopupInfos = `<h5 class="event-dashb-title">${event_name}</h5>
-    <p class="event-dashb-description">${event_description}</p>
-    <i><p class="event-dashb-address"><i class="fa-solid fa-location-dot"></i>  ${event_address}</p></i>
-    <a href="events/${eventId}"> Voir l'évènement </a>`
 
-    this.eventpopupTarget.insertAdjacentHTML("afterbegin", eventPopupInfos)
+    dayEvents.forEach((dayevent) => {
+      const eventPopupInfos = `<div class="events-popup-infos"><h5 class="event-dashb-title">${dayevent.name}</h5>
+      <p class="event-dashb-description">${dayevent.name}</p>
+      <i><p class="event-dashb-address"><i class="fa-solid fa-location-dot"></i>  ${dayevent.address}</p></i>
+      <a href="events/${dayevent.id}"> Voir l'évènement </a></div>`
 
+      this.eventpopupTarget.insertAdjacentHTML("afterbegin", eventPopupInfos)
+    })
   }
 
-
-
+//   showEverything(element) {
+//     console.log("Salut Tal");
+//     console.log(element);
+//   }
 }
