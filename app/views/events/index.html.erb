@@ -19,11 +19,19 @@
             <% end %>
           </div>
         <% @tags.each do |tag| %>
-        <div class="index-tag">
-            <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-              <%= submit_tag tag.name, name: "query", class:"index-btn-tag" %>
-            <% end %>
-        </div>
+          <% if params[:query] == tag.name %>
+            <div class="index-tag">
+              <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+                <%= submit_tag tag.name, name: "query", class:"index-btn-tag-active" %>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="index-tag">
+                <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+                  <%= submit_tag tag.name, name: "query", class:"index-btn-tag" %>
+                <% end %>
+            </div>
+          <% end %>
         <% end %>
     </div>
   </div>
