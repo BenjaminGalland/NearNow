@@ -39,18 +39,20 @@
     <div class="whole-calendar" data-controller="calendar-popup" data-calendar-popup-events-value="<%= @events.to_json%>">
       <%= month_calendar(events: @events) do |date, events| %>
         <h5> <%= date.day %> </h5>
-          <% events.each do |event| %>
-            <div class="calendar-infobulle"
-              data-action="click->calendar-popup#fire"
-              data-calendar-popup-target="event"
-              data-eventid="<%= event.id%>"
-              >
-            </div>
-            <div class="event-box">
-              
-            </div>
-        <i class="fa-solid fa-circle"></i>
-          <% end %>
+        <% if events.count > 0 %>
+          <i class="fa-solid fa-circle"></i>
+        <% end %>
+        <% events.each do |event| %>
+          <div class="calendar-infobulle"
+            data-action="click->calendar-popup#fire"
+            data-calendar-popup-target="event"
+            data-eventid="<%= event.id%>"
+            data-eventName="<%= event.name %>"
+            data-dayEvents="<%= events.to_json %>"
+            data-eventDescription="<%= event.description %>"
+            data-eventAddress="<%= event.address %>">
+          </div>
+        <% end %>
       <% end %>
 
       <div data-calendar-popup-target="eventpopup" class="event-popup">
