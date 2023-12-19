@@ -79,7 +79,7 @@
   font-size: 15px;
   border-radius: 16px;
   padding: 0.2rem 0.6rem;
-  background-color: $button-color;
+  background-color: $background-color;
   color: white;
   border: 1px solid rgb(126, 115, 255);
   margin-right: 9px;
@@ -92,4 +92,10 @@
   margin-top: 0vh;
   position: absolute;
   top: 26vh;
+}
+
+.username {
+  h5 {
+    font-weight: 600;
+  }
 }

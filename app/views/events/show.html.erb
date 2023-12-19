@@ -14,9 +14,9 @@
   <div class="show-page-background"></div>
   <div class="show-page">
     <div class="show-event-title">
-      <h3><%= @event.name %></h3>
+      <h3 class="bold-title"><%= @event.name %></h3>
       <div class="show-creator-address">
-        <p>créé par @<%= @event.user.username %> <br>
+        <p>créé par @<span class="bold-title"><%= @event.user.username %></span> <br>
         <i class="fa-solid fa-location-dot"></i> <%= @event.address %></p>
       </div>
     </div>
