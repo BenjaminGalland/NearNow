@@ -13,11 +13,19 @@
     data-map-user-location-value="<%= session[:event].nil? ? [5.3699525 ,43.2961743] : [session[:event]["longitude"], session[:event]["latitude"]] %>">
   <div class="index-tags-container">
     <div class="index-tags">
+        <% if params[:query] %>
           <div class="index-tag">
             <%= form_with url: events_path, method: :get, class: "d-flex" do %>
               <%= submit_tag "Tous", class:"index-btn-tag"%>
             <% end %>
           </div>
+        <% else %>
+          <div class="index-tag">
+            <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+              <%= submit_tag "Tous", class:"index-btn-tag-active"%>
+            <% end %>
+          </div>
+        <% end %>
         <% @tags.each do |tag| %>
           <% if params[:query] == tag.name %>
             <div class="index-tag">
