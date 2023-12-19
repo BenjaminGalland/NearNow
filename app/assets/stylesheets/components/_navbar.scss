@@ -2,8 +2,6 @@
   background-color: #edf1f0;
   width: 100%;
   max-height: 7vh;
-  // border-top: 1px solid #cacaca;
-
 }
 
 .navbar {
@@ -18,7 +16,6 @@
   a.nav-link {
     font-size: 16px;
     font-weight: 500;
-
   }
 }
 
@@ -32,21 +29,38 @@
 }
 
 #logout {
+  font-size: 22px;
   background: #d4574e;
   padding: 10px 16px;
-  border-radius: 20px;
+  border-radius: 21px;
   color: white;
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #accueil {
-  background: $blue;
-  padding: 8px 16px;
+  margin: 0;
+  background: $background-color;
+  padding: 10px 18px;
   border-radius: 20px;
   color: white;
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#come-back {
+  background: $background-color;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+logout-nav-link {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-lewagon .navbar-collapse {

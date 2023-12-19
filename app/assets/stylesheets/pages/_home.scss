@@ -33,7 +33,7 @@
 .home-wrapper {
   width: 100%;
   min-height: 93vh;
-  background-image: image-url("NearNowBackgroundHome.png");
+  // background-image: radial-gradient(circle, rgba(255,255,255,0.2721463585434174) 0%, rgba(0,121,145,1) 58%, rgba(0,121,145,1) 100%), image-url("NearNowBackgroundHome.png");
 
   background-position: center;
   background-size: cover;
@@ -41,7 +41,8 @@
 }
 
 .content-home {
-  height: 20vh;
+  background: $gradient-color-home;
+  height: 101vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -79,7 +80,7 @@
   font-size: 15px;
   border-radius: 16px;
   padding: 0.2rem 0.6rem;
-  background-color: $button-color;
+  background-color: $background-color;
   color: white;
   border: 1px solid rgb(126, 115, 255);
   margin-right: 9px;
@@ -92,4 +93,20 @@
   margin-top: 0vh;
   position: absolute;
   top: 26vh;
+}
+
+.username {
+  h5 {
+    font-weight: 600;
+  }
+}
+
+#title-homepage {
+  position: absolute;
+  top: 240px;
+  font-size: 10vh;
+}
+
+#boussole-homepage {
+  font-size: 12vh;
 }

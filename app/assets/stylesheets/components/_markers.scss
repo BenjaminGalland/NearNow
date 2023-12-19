@@ -9,7 +9,7 @@
 // }
 
 .event-marker {
-  animation: GrowUp 2s ease-out forwards;
+  animation: GrowUp 2.5s ease-out forwards;
   border-radius: 50%;
   &.public {
 
@@ -58,6 +58,58 @@
 
   75% {
     scale:1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.public-icon-homepage {
+  position: absolute;
+  top: 562px;
+  right: 301px;
+  width: 60px;
+  height: 60px;
+  animation: HomeMarker 5s infinite;
+}
+.public-icon-homepage2 {
+  position: absolute;
+  top: 600px;
+  right: 351px;
+  width: 60px;
+  height: 60px;
+}
+
+.private-icon-homepage {
+  position: absolute;
+  top: 120px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+  animation: HomeMarker 5s infinite;
+}
+
+.private-icon-homepage1 {
+  z-index: 10;
+  position: absolute;
+  top: 283px;
+  right: 87px;
+  width: 56px;
+  height: 54px;
+}
+
+@keyframes HomeMarker {
+  0% {
+    scale: 1;
+  }
+
+  20% {
+    scale: 1.1;
+  }
+
+  40% {
+    scale: 1;
   }
 
   100% {
