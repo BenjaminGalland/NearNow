@@ -82,12 +82,14 @@
   h3{
     margin-top: 2vh;
     margin-bottom: 2vh;
+    font-weight: 600;
   }
 }
 
 .dashb-no-event-created{
   text-align: center;
   font-family: $username-font;
+
 }
 
 .dashb-events-created {
@@ -246,4 +248,22 @@
 
 .calendar-infobulle {
   font-weight: 600 ;
+}
+
+.event-popup {
+  .event-dashb-title {
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  // .event-dashb-address {
+  // }
+
+  .event-dashb-description {
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 22px;
+  }
 }

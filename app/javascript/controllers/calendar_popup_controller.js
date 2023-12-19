@@ -19,9 +19,9 @@ export default class extends Controller {
     const event_description = event.description
     const event_address = event.address
 
-    const eventPopupInfos = `<h5>${event_name}</h5>
-    <p>${event_description}</p>
-    <p>${event_address}</p>
+    const eventPopupInfos = `<h5 class="event-dashb-title">${event_name}</h5>
+    <p class="event-dashb-description">${event_description}</p>
+    <i><p class="event-dashb-address"><i class="fa-solid fa-location-dot"></i>  ${event_address}</p></i>
     <a href="events/${eventId}"> Voir l'évènement </a>`
 
     this.eventpopupTarget.insertAdjacentHTML("afterbegin", eventPopupInfos)
