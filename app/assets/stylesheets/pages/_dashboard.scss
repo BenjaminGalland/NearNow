@@ -170,13 +170,21 @@
 
   .day {
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
     height: 55px;
   }
+
+  .case-selected {
+    // border: 1px solid black !important;
+    // border-radius: 12px !important;
+    font-size: 16px;
+    color: $background-color;
+  }
+
   .wday-0 {
 
     max-width: 5vw;
@@ -248,6 +256,9 @@
 
 .calendar-infobulle {
   font-weight: 600 ;
+  height: 5px;
+  width: 100%;
+  z-index: 10;
 }
 
 .event-popup {
@@ -266,4 +277,13 @@
   a {
     font-size: 22px;
   }
+}
+
+.dashboard-circle {
+  font-size: 16px;
+  color: $background-color;
+}
+
+.events-popup-infos {
+  margin-bottom: 4vh;
 }
