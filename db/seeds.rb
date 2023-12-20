@@ -26,12 +26,21 @@ puts "Create dylane user"
 dylane = User.create(username: "dylane", email: "dylane@gmail.com", password: "azerty", age: 27, location: "Marseille", description: "")
 puts "Create t0t0 user"
 t0t0 = User.create(username: "t0t0", email: "t0t0@gmail.com", password: "azerty", age: 29, location: "", description: "Antoine et Théo m'ont séquestré pendant si longtemps, maintenant à moi la liberté !")
+puts "Create ddiieeggooo user"
+diego = User.create(username: "diego", email: "diego@gmail.com", password: "azerty", age: 32, location: "", description: "Vous avez combien de bitcoins vous ?")
+puts "Create titi"
+titi = User.create(username: "titi", email: "titi@gmail.com", password: "azerty", age: 8, location: "", description: "J'ai pas beaucoup d'amis mais ils sont gentils")
+
 
 puts "Create tags --------------"
 technologie = Tag.create(name: "Technologie")
-sport = Tag.create(name: "Sport")
 culturel = Tag.create(name: "Culturel")
+bowling = Tag.create(name: "Bowling")
+loisirs = Tag.create(name: "Loisirs")
+sport = Tag.create(name: "Sport")
 famille = Tag.create(name: "Famille")
+divers = Tag.create(name: "Divers")
+nourriture = Tag.create(name: "Nourriture")
 environnement = Tag.create(name: "Environnement")
 musique = Tag.create(name: "Musique")
 cinema = Tag.create(name: "Cinéma")
@@ -91,7 +100,7 @@ event3 = Event.create(
   name: "Marché de Noël",
   start_date: DateTime.new(2023,12,22,18,15),
   end_date: DateTime.new(2023,12,25,23,00),
-  address: "Place du Général-de-Gaulle 13001 Marseille",
+  address: "Rue de l'Observance 13001 Marseille",
   description: "Les cabanons de Noël sont de retours !",
   public: true,
   max_people: 0,
@@ -115,10 +124,10 @@ event4 = Event.create(
   name: "Sortie MUCEM",
   start_date: DateTime.new(2023,12,22,14,00),
   end_date: DateTime.new(2023,12,22,23,00),
-  address: "22 rue lulli Marseille",
+  address: "Rue Robert Marseille",
   description: "Exposition personnelle de l'artiste Alexandre IMBERT « Des Lieux et des Sentiments ».",
-  public: true,
-  max_people: 0,
+  public: false,
+  max_people: 7,
   user_id: marseille.id
   )
 chatroom = Chatroom.new(name: event4.name, event_id: event4.id)
@@ -126,7 +135,7 @@ chatroom.save
 
 EventTag.create(event_id: event4.id, tag_id: culturel.id)
 
-11.times do
+5.times do
   Participant.create(user_id: toto.id, event_id: event4.id)
 end
 
@@ -138,10 +147,10 @@ event5 = Event.create(
   name: "Conférence Ruby on Rails",
   start_date: DateTime.new(2023,12,23,14,00),
   end_date: DateTime.new(2023,12,23,23,00),
-  address: "9 La Canebière 13001 Marseille",
+  address: "Rue des dominicaines 13001 Marseille",
   description: "Présentée par Myriam Graïne au Palais de la Bourse.",
-  public: true,
-  max_people: 0,
+  public: false,
+  max_people: 20,
   user_id: marseille.id
   )
 chatroom = Chatroom.new(name: event5.name, event_id: event5.id)
@@ -199,3 +208,73 @@ EventTag.create(event_id: event7.id, tag_id: solidaire.id)
 participant = Participant.new(user_id: dylane.id, event_id: event7.id)
 participant.save
 puts "#{event7.name} created!"
+
+
+event8 = Event.create(
+  name: "Bowling de Noel",
+  start_date: DateTime.new(2023,12,24,18,00),
+  end_date: DateTime.new(2023,12,24,23,00),
+  address: "Rue Roux de Brignoles Marseille",
+  description: "Petit bowling pour tous ceux qui n'ont rien à faire le 24 au soir les copains !",
+  public: false,
+  max_people: 6,
+  user_id: titi.id
+  )
+chatroom = Chatroom.new(name: event8.name, event_id: event8.id)
+chatroom.save
+
+EventTag.create(event_id: event8.id, tag_id: bowling.id)
+
+participant = Participant.new(user_id: titi.id, event_id: event8.id)
+participant.save
+puts "#{event8.name} created!"
+
+event9 = Event.create(
+  name: "Anniv  de Diego",
+  start_date: DateTime.new(2023,12,23,18,00),
+  end_date: DateTime.new(2023,12,23,23,00),
+  address: "l'Orée des pins Sanary sur Mer",
+  description: "Offrez-moi des bitcoins par pitié",
+  public: false,
+  max_people: 15,
+  user_id: diego.id
+  )
+chatroom = Chatroom.new(name: event9.name, event_id: event9.id)
+chatroom.save
+
+EventTag.create(event_id: event9.id, tag_id: famille.id)
+EventTag.create(event_id: event9.id, tag_id: technologie.id)
+
+participant = Participant.new(user_id: diego.id, event_id: event9.id)
+participant.save
+
+11.times do
+  Participant.create(user_id: toto.id, event_id: event9.id)
+end
+puts "#{event9.name} created!"
+
+
+event10 = Event.create(
+  name: "Feu d'artifice",
+  start_date: DateTime.new(2023,12,23,18,00),
+  end_date: DateTime.new(2023,12,23,23,00),
+  address: "Portissol Sanary-sur-Mer",
+  description: "Ca va être trop beau !",
+  public: true,
+  max_people: 15,
+  user_id: toto.id
+  )
+chatroom = Chatroom.new(name: event10.name, event_id: event10.id)
+chatroom.save
+
+EventTag.create(event_id: event10.id, tag_id: famille.id)
+EventTag.create(event_id: event10.id, tag_id: spectacle.id)
+EventTag.create(event_id: event10.id, tag_id: divers.id)
+
+participant = Participant.new(user_id: toto.id, event_id: event10.id)
+participant.save
+
+52.times do
+  Participant.create(user_id: toto.id, event_id: event10.id)
+end
+puts "#{event10.name} created!"

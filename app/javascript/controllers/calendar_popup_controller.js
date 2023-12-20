@@ -31,8 +31,4 @@ export default class extends Controller {
     })
   }
 
-//   showEverything(element) {
-//     console.log("Salut Tal");
-//     console.log(element);
-//   }
 }

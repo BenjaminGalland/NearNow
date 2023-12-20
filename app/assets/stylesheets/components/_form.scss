@@ -1,6 +1,5 @@
 .container-heba {
   max-width: 80vw;
-  // height: 110vh;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -81,7 +80,7 @@
   border-radius: 10px;
   background-color: #14a8c2;
   color: white;
-  border: 1px solid rgb(126, 115, 255);
+  border: 1px solid $background-color;
   width: 34vw;
   text-align: center;
 }
