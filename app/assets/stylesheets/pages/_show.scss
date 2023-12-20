@@ -14,18 +14,6 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-// .show-page-background {
-//   z-index: 4;
-//   width: 100.5vw;
-//   position: absolute;
-//   min-height: 40vh;
-//   bottom: 0;
-//   left: -0.25vw;
-//   border-top-right-radius: 50px;
-//   border-top-left-radius: 50px;
-//   background: $background-color;
-// }
-
 .show-event-card {
   display: flex;
   justify-content: space-evenly;
@@ -85,10 +73,6 @@
   margin-left: 6vw;
   margin-right: 6vw;
 }
-
-// .show-interest {
-//   font-size: 16px;
-// }
 
 .show-event-tags{
   margin-bottom: 1vh;
