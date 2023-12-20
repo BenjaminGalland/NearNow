@@ -26,6 +26,8 @@
   border-radius: 50%;
   border: 5px solid white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  object-fit: cover; // Rajout de cette ligne pour le téléphone Demoday
+
 }
 
 .profile-homepage-description {
@@ -46,6 +48,7 @@
 }
 
 .description-text {
+  margin-top: 2vh; // Rajout de cette ligne pour que ça rende bien sur le téléphone Demoday
   font-size: 16px;
   padding-right: 3vw;
 }

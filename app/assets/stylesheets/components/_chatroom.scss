@@ -1,6 +1,5 @@
 .chatroom {
   background: white;
-  margin-top: 9px;
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
   flex-grow: 1;
 
   h1 {
-    border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
     padding: 1rem;
   }
@@ -36,4 +34,36 @@
     text-decoration: none;
     color: white;
   }
+}
+
+.chatroom-title {
+  background: $background-color;
+  display: flex;
+  justify-content: center;
+
+}
+
+.chatroom-name-room {
+  color: white;
+}
+
+.container {
+  --bs-gutter-x: none;
+}
+
+#message_content {
+  border-radius: 10px 0 0 10px;
+}
+
+.chatroom-icon {
+  color: white;
+
+}
+
+.message-sent {
+  margin-bottom: 1vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
+  padding: 4px;
+  padding-left: 10px;
 }

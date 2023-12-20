@@ -3,7 +3,9 @@
 <div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%=@chatroom.id%>">
-  <h1>#<%= @chatroom.name %></h1>
+  <div class="chatroom-title">
+    <h1 class="chatroom-name-room"><i class="fa-solid fa-comments chatroom-icon"></i> <%= @chatroom.name %></h1>
+  </div>
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
@@ -18,15 +20,11 @@
       placeholder: "Message ##{@chatroom.name}",
       wrapper_html: {class: "flex-grow-1"}
     %>
-    <%= f.submit "Envoyer", class: "btn btn-primary mb-3" %>
+    <%= f.submit "Envoyer", class: "btn mb-3", id: "chatroom-send-button" %>
   <% end %>
 </div>
-<div class="chatroom-back">
-  <div class="button-blueish">
-    <%= link_to "Retour", event_path(@chatroom.event) %>
+
+  <% else %>
+    <p>Vous n'avez pas accès à ce canal de discussion!</p>
+  <% end %>
   </div>
-</div>
-<% else %>
-  <p>Vous n'avez pas accès à ce canal de discussion!</p>
-<% end %>
-</div>
