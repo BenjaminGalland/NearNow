@@ -32,20 +32,13 @@
 
 .home-wrapper {
   width: 100%;
-  min-height: 93vh;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.content-home {
+  min-height: 101vh;
   background: $gradient-color-home;
-  height: 101vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
 }
+
 
 .homepage-link {
   display: flex;
@@ -112,9 +105,8 @@
 }
 
 #title-homepage {
-  position: absolute;
-  top: 240px;
   font-size: 10vh;
+  color: white;
 }
 
 #boussole-homepage {
