@@ -26,11 +26,20 @@ puts "Create dylane user"
 dylane = User.create(username: "dylane", email: "dylane@gmail.com", password: "azerty", age: 27, location: "Marseille", description: "")
 puts "Create t0t0 user"
 t0t0 = User.create(username: "t0t0", email: "t0t0@gmail.com", password: "azerty", age: 29, location: "", description: "Antoine et Théo m'ont séquestré pendant si longtemps, maintenant à moi la liberté !")
+puts "Create ddiieeggooo user"
+diego = User.create(username: "diego", email: "diego@gmail.com", password: "azerty", age: 32, location: "", description: "Vous avez combien de bitcoins vous ?")
+puts "Create titi"
+titi = User.create(username: "titi", email: "titi@gmail.com", password: "azerty", age: 8, location: "", description: "J'ai pas beaucoup d'amis mais ils sont gentils")
+
 
 puts "Create tags --------------"
+divers = Tag.create(name: "Divers")
+nourriture = Tag.create(name: "Nourriture")
+bowling = Tag.create(name: "Bowling")
 technologie = Tag.create(name: "Technologie")
 sport = Tag.create(name: "Sport")
 culturel = Tag.create(name: "Culturel")
+loisirs = Tag.create(name: "Loisirs")
 famille = Tag.create(name: "Famille")
 environnement = Tag.create(name: "Environnement")
 musique = Tag.create(name: "Musique")
